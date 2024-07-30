@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Papers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-image: url('https://lh5.googleusercontent.com/aFWjNd-gagx6mwj-Y0CIogG0VxhvdBgBjQ7m9GV40fI53qT8I-fnd91lQFo6o2rzU0OV8mM_C3GShJ4HtDfbAtY_hV07EjBPbdn3Yk7H8krkNFIZtrZotefV5QpTyE_WCg=w1280');
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* 50% black overlay */
+        }
+        .header-text {
+            color: white;
+            font-family: 'Merriweather', serif;
+            font-size: 2em; /* Responsive font size */
+            font-weight: bold;
+            position: relative;
+            z-index: 1; /* Ensures text appears above the overlay */
+            padding: 0 10px; /* Padding for smaller screens */
+        }
+        .container {
+            width: 95%; /* Default width for better mobile view */
+            min-width: 320px;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: width 0.3s ease;
+            margin: auto;
+        }
+        @media (min-width: 480px) {
+            .container {
+                width: 80%;
+            }
+        }
+        @media (min-width: 800px) {
+            .container {
+                width: 70%;
+            }
+        }
+        .filter-buttons {
+            display: flex; /* Enable flexbox */
+            flex-wrap: wrap; /* Allow wrapping as needed */
+            text-align: center; /* Centering buttons for better mobile visibility */
+            justify-content: center; /* Center-align buttons */
+            padding: 10px 0; /* Padding for better spacing */
+        }
+        .filter-buttons button {
+            flex-grow: 1; /* Allows buttons to grow and fill the space */
+            flex-basis: calc(25% - 10px); /* Calculate width minus margin */
+            text-align: center; /* Ensure text is centered */
+
+            background-color: #a9b7d1;
+            color: white;
+            border: none;
+            margin: 5px; /* Added margin for touch targets */
+            padding: 15px 10px; /* Larger padding for easier interaction */
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .filter-buttons button.active {
+            background-color: #1c4587;
+        }
+        .filter-buttons button:hover {
+            background-color: #163a70;
+        }
+        /* Specific styles for 'All' button to take full width when wrapping occurs */
+        .filter-buttons .all-button {
+                order: -1; /* Make it always the first */
+        }
+        @media (max-width: 800px) {
+            .filter-buttons .all-button {
+                flex-basis: 100%; /* Take full width */
+            }
+            .filter-buttons button:not(.all-button) {
+                flex-basis: calc(33.33% - 20px); /* Adjust for 3 buttons per row when 'All' is full width */
+            }
+        }
+
+        .paper-list {
+            margin-bottom: 50px; /* Reduced bottom margin */
+        }
+        .paper {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s;
+        }
+        .paper:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .paper:last-child {
+            margin-bottom: 20px; /* Adjusted for consistency */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-text">Publications</div>
+    </div>
+    <div class="container">
+        <div class="filter-buttons">
+            <button class="button all-button" onclick="filterPapers('all')">All</button>
+            <button class="button" onclick="filterPapers('conference')">Conference</button>
+            <button class="button" onclick="filterPapers('journal')">Journal</button>
+            <button class="button" onclick="filterPapers('preprint')">Preprint</button>
+        </div>
+        <div id="paper-list" class="paper-list">
+            <!-- Paper items will be injected here -->
+        </div>
+    </div>
+<script>
+    const conference_papers = [
+        {
+            "title": "Accelerating Large Image Super-Resolution Networks with Pixel-Level Classification",
+            "authors": ["Jinho Jeong", "Jinwoo Kim", "Younghyun Jo", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2024,
+            "topic": ["Low-level Vision"],
+            "category": "conference"
+        },
+        {
+            "title": "VISAGE: Video Instance Segmentation with Appearance-Guided Enhancement",
+            "authors": ["Hanjung Kim", "Jaehyun Kang", "Miran Heo", "Sukjun Hwang", "Seoung Wug Oh", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2024,
+            "topic": ["Video Vision"],
+            "category": "conference"
+        },
+        {
+            "title": "ActionSwitch: Class-agnostic Detection of Simultaneous Actions in Streaming Videos",
+            "authors": ["Hyolim Kang", "Jeongseok Hyun", "Joungbin An", "Youngjae Yu", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2024,
+            "topic": ["Video Vision"],
+            "category": "conference"
+        },
+        {
+            "title": "Hierarchically Structured Neural Bones for Reconstructing Animatable Objects from Casual Videos",
+            "authors": ["Subin Jeon", "In Cho", "Minsu Kim", "Woongoh Cho", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2024,
+            "topic": ["3D Vision"],
+            "category": "conference"
+        },
+        {
+            "title": "Domain Reduction Strategy for Non-Line-of-Sight Imaging",
+            "authors": ["Hyunbo Shim*", "In Cho*", "Daekyu Kwon", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2024,
+            "topic": ["3D Vision"],
+            "category": "conference"
+        },
+        {
+            "title": "Learning to Enhance Aperture Phasor Field for Non-Line-of-Sight Imaging",
+            "authors": ["In Cho", "Hyunbo Shim", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2024,
+            "topic": ["3D Vision"],
+            "category": "conference"
+        },
+        {
+            "title": "Attentive Illumination Decomposition Model for Multi-Illuminant White Balancing",
+            "authors": ["Dongyoung Kim", "Jin Woo Kim", "Junsang Yu", "Seon Joo Kim"],
+            "venue": "CVPR",
+            "year": 2024,
+            "topic": ["Low-level Vision"],
+            "category": "conference"
+        },
+    ];
+    const journal_papers = [
+        {
+            "title": "Test",
+            "authors": ["Jeongseok"],
+            "venue": "Korea",
+            "year": 2024,
+            "topic": ["Website"],
+            "category": "journal"
+        }
+    ];
+    const preprint_papers = [
+    {
+        "title": "Exploring Scalability of Self-Training for Open-Vocabulary Temporal Action Localization",
+        "authors": ["Jeongseok Hyun", "Su Ho Han", "Hyolim Kang", "Joon-Young Lee", "Seon Joo Kim"],
+        "venue": "arxiv",
+        "year": 2024,
+        "topic": ["Video Vision"],
+        "category": "preprint"
+    }
+];
+    const papers = [...conference_papers, ...journal_papers, ...preprint_papers];
+
+    function filterPapers(category) {
+        const buttons = document.querySelectorAll('.button');
+        buttons.forEach(button => {
+            if (button.textContent.toLowerCase() === category) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+
+        const paperList = document.getElementById('paper-list');
+        paperList.innerHTML = '';
+        const filteredPapers = category === 'all' ? papers : papers.filter(paper => paper.category === category);
+        filteredPapers.forEach(paper => {
+            const paperItem = document.createElement('div');
+            paperItem.className = 'paper';
+            paperItem.innerHTML = `<div><strong>${paper.title}</strong></div>
+                                   <div>
+                                    <span style="color: #3d85c6; font-style: italic;">
+                                        ${paper.venue} ${paper.year}
+                                      </span> - ${paper.authors.join(", ")}
+                                   </div>`;
+            paperList.appendChild(paperItem);
+        });
+    }
+
+    // Initialize the page with all papers visible
+    window.onload = function() {
+        filterPapers('all');
+        document.querySelector('.filter-buttons button').classList.add('active');
+    };
+</script>
+</body>
+</html>

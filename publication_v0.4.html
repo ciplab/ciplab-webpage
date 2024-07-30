@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Papers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-image: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* 50% black overlay */
+        }
+        .header-text {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.7em; /* Responsive font size */
+            font-weight: bold;
+            position: relative;
+            z-index: 1; /* Ensures text appears above the overlay */
+            padding: 0 10px; /* Padding for smaller screens */
+        }
+        .container {
+            width: 95%; /* Default width for better mobile view */
+            min-width: 320px;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: width 0.3s ease;
+            margin: auto;
+        }
+        @media (min-width: 480px) {
+            .container {
+                width: 80%;
+            }
+        }
+        @media (min-width: 800px) {
+            .container {
+                width: 70%;
+            }
+        }
+        .instruction-text {
+            font-size: 0.9em;
+            color: #333;
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif; /* Matches the font of the paper list */
+        }
+        .filter-buttons {
+            display: flex; /* Enable flexbox */
+            flex-wrap: wrap; /* Allow wrapping as needed */
+            text-align: center; /* Centering buttons for better mobile visibility */
+            justify-content: center; /* Center-align buttons */
+            padding: 10px 0; /* Padding for better spacing */
+        }
+        .filter-buttons button {
+            flex-grow: 1; /* Allows buttons to grow and fill the space */
+            flex-basis: calc(25% - 10px); /* Calculate width minus margin */
+            text-align: center; /* Ensure text is centered */
+            font-size: 0.9em;
+            background-color: #a9b7d1;
+            color: white;
+            border: none;
+            margin: 5px; /* Added margin for touch targets */
+            padding: 15px 10px; /* Larger padding for easier interaction */
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .filter-buttons button.active {
+            background-color: #1c4587;
+        }
+        .filter-buttons button:hover {
+            background-color: #163a70;
+        }
+        /* Specific styles for 'All' button to take full width when wrapping occurs */
+        .filter-buttons .all-button {
+                order: -1; /* Make it always the first */
+        }
+        @media (max-width: 800px) {
+            .filter-buttons .all-button {
+                flex-basis: 100%; /* Take full width */
+            }
+            .filter-buttons button:not(.all-button) {
+                flex-basis: calc(33.33% - 20px); /* Adjust for 3 buttons per row when 'All' is full width */
+            }
+        }
+
+        .paper-list {
+            margin-bottom: 80px; /* Reduced bottom margin */
+        }
+        .paper {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 10px;
+            transition: box-shadow 0.3s;
+        }
+        .paper:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .paper:last-child {
+            margin-bottom: 20px; /* Adjusted for consistency */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-text">Publications</div>
+    </div>
+    <div class="container">
+        <div class="instruction-text">&nbsp&nbsp*Clicking each box will take you to the corresponding paper or project page.</div>
+        <div class="filter-buttons">
+            <button class="button all-button" onclick="filterPapers('all')">All</button>
+            <button class="button" onclick="filterPapers('conference')">Conference</button>
+            <button class="button" onclick="filterPapers('journal')">Journal</button>
+            <button class="button" onclick="filterPapers('preprint')">Preprint</button>
+        </div>
+        <div id="paper-list" class="paper-list">
+            <!-- Paper items will be injected here -->
+        </div>
+    </div>
+<script>
+    async function fetch_data(tgt_url) {
+        try {
+            const response = await fetch(tgt_url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const text_data = await response.text();
+            const data = JSON.parse(text_data)
+            return data
+        } catch (error) {
+            console.error('Error fetching the JSON:', error);
+        }
+    }
+
+    const conference_url = "https://raw.githubusercontent.com/HYUNJS/ciplab_publication_/main/conference_papers.jsonl";
+    const journal_url = "https://raw.githubusercontent.com/HYUNJS/ciplab_publication_/main/journal_papers.jsonl";
+    const preprint_url = "https://raw.githubusercontent.com/HYUNJS/ciplab_publication_/main/preprint_papers.jsonl";
+    let conference_papers = null;
+    let journal_papers = null;
+    let preprint_papers = null;
+
+    async function fetch_all_data() {
+        const conference_promise = fetch_data(conference_url);
+        const journal_promise = fetch_data(journal_url);
+        const preprint_promise = fetch_data(preprint_url);
+        [conference_papers, journal_papers, preprint_papers] = await Promise.all([conference_promise, journal_promise, preprint_promise]);
+    }
+    
+    function sortPapers(papers) {
+            return papers.sort((a, b) => {
+            // Sort by year in descending order
+            if (b.year !== a.year) {
+                return b.year - a.year;
+            }
+
+            // Define the order of categories
+            const categoryOrder = {
+                conference: 1,
+                journal: 2,
+                preprint: 3
+            };
+
+            // Sort by category based on the defined order
+            if (categoryOrder[a.category] !== categoryOrder[b.category]) {
+                return categoryOrder[a.category] - categoryOrder[b.category];
+            }
+
+            // If year and category are the same, maintain the original order
+            return 0;
+        });
+    }
+
+    function filterPapers(category) {
+        const buttons = document.querySelectorAll('.button');
+        buttons.forEach(button => {
+            if (button.textContent.toLowerCase() === category) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+
+        const paperList = document.getElementById('paper-list');
+        paperList.innerHTML = '';
+        const filteredPapers = category === 'all' ? papers : papers.filter(paper => paper.category === category);
+        filteredPapers.forEach(paper => {
+            const paperItem = document.createElement('div');
+            let reward = "";
+            if (paper.hasOwnProperty('reward')) {
+              reward = ` <b>(${paper.reward})</b>`;
+            }
+            paperItem.className = 'paper';
+
+            if (paper.link === "#"){
+                paperItem.innerHTML = `<div><strong>${paper.title}</strong></div>
+                                       <div>
+                                       <span style="color: #3d85c6; font-style: italic;">
+                                           ${paper.venue} ${paper.year}${reward}
+                                       </span> - ${paper.authors.join(", ")}
+                                       </div>`;
+            } else{
+                paperItem.innerHTML = `<a href=${paper.link} style="text-decoration: none; color: inherit;">
+                                    <div><strong>${paper.title}</strong></div>
+                                    <div>
+                                        <span style="color: #3d85c6; font-style: italic;">
+                                            ${paper.venue} ${paper.year}${reward}
+                                        </span> - ${paper.authors.join(", ")}
+                                    </div>
+                                    </a>`;
+            }
+            paperList.appendChild(paperItem);
+        });
+    }
+
+    let papers = null;
+    function renderPage(){
+        if (conference_papers && journal_papers && preprint_papers) {
+            const all_papers = [...conference_papers, ...journal_papers, ...preprint_papers];
+            papers = sortPapers(all_papers);
+            filterPapers('all');
+            document.querySelector('.filter-buttons button').classList.add('active');
+        } else {
+            console.error('Error: Data not loaded properly.');
+        }
+    }
+
+    async function main(){
+        await fetch_all_data();
+        renderPage();
+    }
+    main();
+
+    window.onload = function() {
+        main();
+    };
+    
+</script>
+</body>
+</html>

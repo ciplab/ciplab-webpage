@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Papers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-image: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* 50% black overlay */
+        }
+        .header-text {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.7em; /* Responsive font size */
+            font-weight: bold;
+            position: relative;
+            z-index: 1; /* Ensures text appears above the overlay */
+            padding: 0 10px; /* Padding for smaller screens */
+        }
+        .container {
+            width: 95%; /* Default width for better mobile view */
+            min-width: 320px;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: width 0.3s ease;
+            margin: auto;
+        }
+        @media (min-width: 480px) {
+            .container {
+                width: 80%;
+            }
+        }
+        @media (min-width: 800px) {
+            .container {
+                width: 70%;
+            }
+        }
+        .instruction-text {
+            font-size: 0.9em;
+            color: #333;
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif; /* Matches the font of the paper list */
+        }
+        .filter-buttons {
+            display: flex; /* Enable flexbox */
+            flex-wrap: wrap; /* Allow wrapping as needed */
+            text-align: center; /* Centering buttons for better mobile visibility */
+            justify-content: center; /* Center-align buttons */
+            padding: 10px 0; /* Padding for better spacing */
+        }
+        .filter-buttons button {
+            flex-grow: 1; /* Allows buttons to grow and fill the space */
+            flex-basis: calc(25% - 10px); /* Calculate width minus margin */
+            text-align: center; /* Ensure text is centered */
+            font-size: 0.9em;
+            background-color: #a9b7d1;
+            color: white;
+            border: none;
+            margin: 5px; /* Added margin for touch targets */
+            padding: 15px 10px; /* Larger padding for easier interaction */
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .filter-buttons button.active {
+            background-color: #1c4587;
+        }
+        .filter-buttons button:hover {
+            background-color: #163a70;
+        }
+        /* Specific styles for 'All' button to take full width when wrapping occurs */
+        .filter-buttons .all-button {
+                order: -1; /* Make it always the first */
+        }
+        @media (max-width: 800px) {
+            .filter-buttons .all-button {
+                flex-basis: 100%; /* Take full width */
+            }
+            .filter-buttons button:not(.all-button) {
+                flex-basis: calc(33.33% - 20px); /* Adjust for 3 buttons per row when 'All' is full width */
+            }
+        }
+
+        .paper-list {
+            margin-bottom: 80px; /* Reduced bottom margin */
+        }
+        .paper {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 10px;
+            transition: box-shadow 0.3s;
+        }
+        .paper:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .paper:last-child {
+            margin-bottom: 20px; /* Adjusted for consistency */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-text">Publications</div>
+    </div>
+    <div class="container">
+        <div class="instruction-text">&nbsp&nbsp*Clicking each box will take you to the corresponding paper or project page.</div>
+        <div class="filter-buttons">
+            <button class="button all-button" onclick="filterPapers('all')">All</button>
+            <button class="button" onclick="filterPapers('conference')">Conference</button>
+            <button class="button" onclick="filterPapers('journal')">Journal</button>
+            <button class="button" onclick="filterPapers('preprint')">Preprint</button>
+        </div>
+        <div id="paper-list" class="paper-list">
+            <!-- Paper items will be injected here -->
+        </div>
+    </div>
+<script>
+    const conference_papers = [
+        {
+            "title": "Accelerating Large Image Super-Resolution Networks with Pixel-Level Classification",
+            "authors": ["Jinho Jeong", "Jinwoo Kim", "Younghyun Jo", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2024,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "#",
+        },
+        {
+            "title": "VISAGE: Video Instance Segmentation with Appearance-Guided Enhancement",
+            "authors": ["Hanjung Kim", "Jaehyun Kang", "Miran Heo", "Sukjun Hwang", "Seoung Wug Oh", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2024,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://kimhanjung.github.io/VISAGE/"
+        },
+        {
+            "title": "ActionSwitch: Class-agnostic Detection of Simultaneous Actions in Streaming Videos",
+            "authors": ["Hyolim Kang", "Jeongseok Hyun", "Joungbin An", "Youngjae Yu", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2024,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://arxiv.org/abs/2407.12987"
+        },
+        {
+            "title": "Hierarchically Structured Neural Bones for Reconstructing Animatable Objects from Casual Videos",
+            "authors": ["Subin Jeon", "In Cho", "Minsu Kim", "Woongoh Cho", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2024,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "#"
+        },
+        {
+            "title": "Domain Reduction Strategy for Non-Line-of-Sight Imaging",
+            "authors": ["Hyunbo Shim*", "In Cho*", "Daekyu Kwon", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2024,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://arxiv.org/abs/2308.10269"
+        },
+        {
+            "title": "Learning to Enhance Aperture Phasor Field for Non-Line-of-Sight Imaging",
+            "authors": ["In Cho", "Hyunbo Shim", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2024,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "#"
+        },
+        {
+            "title": "Attentive Illumination Decomposition Model for Multi-Illuminant White Balancing",
+            "authors": ["Dongyoung Kim", "Jinwoo Kim", "Junsang Yu", "Seon Joo Kim"],
+            "venue": "CVPR",
+            "year": 2024,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://www.dykim.me/projects/aid",
+        },
+        {
+            "title": "Towards Interpretable Controllability in Object-Centric Learning",
+            "authors": ["Jinwoo Kim*", "Janghyuk Choi*", "Jaehyun Kang", "Changyeon Lee", "Ho-Jin Choi", "Seon Joo Kim"],
+            "venue": "CVPRW",
+            "year": 2024,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://arxiv.org/abs/2310.08929"
+        },
+        {
+            "title": "Object Aware Egocentric Online Action Detection",
+            "authors": ["Joungbin An", "Yunsu Park", "Hyolim Kang", "Seon Joo Kim"],
+            "venue": "CVPRW",
+            "year": 2024,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://arxiv.org/abs/2406.01079"
+        },
+        {
+            "title": "MiniROAD: Minimal Framework for Online Action Detection",
+            "authors": ["Joungbin An", "Hyolim Kang", "Su Ho Han", "Ming-Hsuan Yang", "Seon Joo Kim"],
+            "venue": "ICCV",
+            "year": 2023,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/ICCV2023/html/An_MiniROAD_Minimal_RNN_Framework_for_Online_Action_Detection_ICCV_2023_paper.html"
+        },
+        {
+            "title": "A Generalized Framework for Video Instance Segmentation",
+            "authors": ["Miran Heo", "Sukjun Hwang", "Jeongseok Hyun", "Hanjung Kim", "Seoung Wug Oh", "Joon-Young Lee", "Seon Joo Kim"],
+            "venue": "CVPR",
+            "year": 2023,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/CVPR2023/html/Heo_A_Generalized_Framework_for_Video_Instance_Segmentation_CVPR_2023_paper.html"
+        },
+        {
+            "title": "Shepherding Slots to Objects: Towards Stable and Robust Object-Centric Learning",
+            "authors": ["Jinwoo Kim*", "Janghyuk Choi*", "Ho-Jin Choi", "Seon Joo Kim"],
+            "venue": "CVPR",
+            "year": 2023,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/CVPR2023/html/Kim_Shepherding_Slots_to_Objects_Towards_Stable_and_Robust_Object-Centric_Learning_CVPR_2023_paper.html"
+        },
+        {
+            "title": "Soft-Landing Strategy for Alleviating the Task Discrepancy Problem in Temporal Action Localization Tasks",
+            "authors": ["Hyolim Kang", "Hanjung Kim", "Joungbin An", "Minsu Cho", "Seon Joo Kim"],
+            "venue": "CVPR",
+            "year": 2023,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/CVPR2023/html/Kang_Soft-Landing_Strategy_for_Alleviating_the_Task_Discrepancy_Problem_in_Temporal_CVPR_2023_paper.html"
+        },
+        {
+            "title": "VITA: Video Instance Segmentation via Object Token Association",
+            "authors": ["Miran Heo*", "Sukjun Hwang*", "Seoung Wug Oh", "Joon-Young Lee", "Seon Joo Kim"],
+            "venue": "NeurIPS",
+            "year": 2022,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openreview.net/forum?id=xnuN2vGmZA0"
+        },
+        {
+            "title": "Dense Interspecies Face Embedding",
+            "authors": ["Sejong Yang", "Subin Jeon", "Seonghyeon Nam", "Seon Joo Kim"],
+            "venue": "NeurIPS",
+            "year": 2022,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openreview.net/forum?id=m67FNFdgLO9"
+        },
+        {
+            "title": "ComMU: Dataset for Combinatorial Music Generation",
+            "authors": ["Lee Hyun*", "Taehyun Kim*", "Hyolim Kang", "Minjoo Ki", "Hyeonchan Hwang", "Kwanho Park", "Sharang Han", "Seon Joo Kim"],
+            "venue": "NeurIPS",
+            "year": 2022,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openreview.net/forum?id=Jq3uTzLg9se"
+        },
+        {
+            "title": "Error Compensation Framework for Flow-Guided Video Inpainting",
+            "authors": ["Jaeyeon Kang", "Seoung Wug Oh", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2022,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/2166_ECCV_2022_paper.php"
+        },
+        {
+            "title": "A Sliding Window Scheme for Online Temporal Action Localization",
+            "authors": ["Young Hwi Kim", "Hyolim Kang", "Seon Joo Kim"],
+            "venue": "ECCV",
+            "year": 2022,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/2307_ECCV_2022_paper.php"
+        },
+        {
+            "title": "Cannot See the Forest for the Trees: Aggregating Multiple Viewpoints to Better Classify Objects in Videos",
+            "authors": ["Sukjun Hwang", "Miran Heo", "Seoung Wug Oh", "Seon Joo Kim"],
+            "venue": "CVPR",
+            "year": 2022,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/CVPR2022/html/Hwang_Cannot_See_the_Forest_for_the_Trees_Aggregating_Multiple_Viewpoints_CVPR_2022_paper.html"
+        },
+        {
+            "title": "UBoCo: Unsupervised Boundary Contrastive Learning for Generic Event Boundary Detection",
+            "authors": ["Hyolim Kang*", "Jinwoo Kim*", "Taehyun Kim", "Seon Joo Kim"],
+            "venue": "CVPR",
+            "year": 2022,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/CVPR2022/html/Kang_UBoCo_Unsupervised_Boundary_Contrastive_Learning_for_Generic_Event_Boundary_Detection_CVPR_2022_paper.html"
+        },
+        {
+            "title": "VISOLO: Grid-Based Space-Time Aggregation for Efficient Online Video Instance Segmentation",
+            "authors": ["Su Ho Han", "Sukjun Hwang", "Seoung Wug Oh", "Yeonchool Park", "Hyunwoo Kim", "Min-Jung Kim", "Seon Joo Kim"],
+            "venue": "CVPR",
+            "year": 2022,
+            "topic": ["_"],
+            "category": "conference",
+            "reward": "Oral",
+            "link": "https://openaccess.thecvf.com/content/CVPR2022/html/Han_VISOLO_Grid-Based_Space-Time_Aggregation_for_Efficient_Online_Video_Instance_Segmentation_CVPR_2022_paper.html"
+        },
+        {
+            "title": "Integrating Pose and Mask Predictions for Multi-Person in Videos",
+            "authors": ["Miran Heo", "Sukjun Hwang", "Seoung Wug Oh", "Joon-Young Lee", "Seon Joo Kim"],
+            "venue": "CVPRW",
+            "year": 2022,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/CVPR2022W/ECV/html/Heo_Integrating_Pose_and_Mask_Predictions_for_Multi-Person_in_Videos_CVPRW_2022_paper.html"
+        },
+        {
+            "title": "Single-shot Path Integrated Panoptic Segmentation",
+            "authors": ["Sukjun Hwang", "Seoung Wug Oh", "Seon Joo Kim"],
+            "venue": "WACV",
+            "year": 2022,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/WACV2022/html/Hwang_Single-Shot_Path_Integrated_Panoptic_Segmentation_WACV_2022_paper.html"
+        },
+        {
+            "title": "Video Instance Segmentation using Inter-Frame Communication Transformers",
+            "authors": ["Sukjun Hwang", "Miran Heo", "Seoung Wug Oh", "Seon Joo Kim"],
+            "venue": "NeurIPS",
+            "year": 2021,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openreview.net/forum?id=pvjfA4wogD6"
+        },
+        {
+            "title": "CAG-QIL: Context-Aware Actionness Grouping via Q Imitation Learning for Online Temporal Action Localization",
+            "authors": ["Hyolim Kang", "Kyungmin Kim", "Yumin Ko", "Seon Joo Kim"],
+            "venue": "ICCV",
+            "year": 2021,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/ICCV2021/html/Kang_CAG-QIL_Context-Aware_Actionness_Grouping_via_Q_Imitation_Learning_for_Online_ICCV_2021_paper.html"
+        },
+        {
+            "title": "Large Scale Multi-Illuminant (LSMI) Dataset for Developing White Balance Algorithm under Mixed Illumination",
+            "authors": ["Dongyoung Kim", "Jinwoo Kim", "Seonghyeon Nam", "Dongwoo Lee", "Yeonkyung Lee", "Nahyup Kang", "Hyong-Euk Lee", "Byungin Yu", "Jae-joon Han", "Seon Joo Kim"],
+            "venue": "ICCV",
+            "year": 2021,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://www.dykim.me/projects/lsmi"
+        },
+        {
+            "title": "Polygonal Point Set Tracking",
+            "authors": ["G. Nam", "M. Heo", "S. W. Oh", "J.-Y. Lee", "S. J. Kim"],
+            "venue": "CVPR",
+            "year": 2021,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/CVPR2021/html/Nam_Polygonal_Point_Set_Tracking_CVPR_2021_paper.html"
+        },
+        {
+            "title": "Practical Single-Image Super-Resolution Using Look-Up Table",
+            "authors": ["Y. Jo", "S. J. Kim"],
+            "venue": "CVPR",
+            "year": 2021,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/CVPR2021/html/Jo_Practical_Single-Image_Super-Resolution_Using_Look-Up_Table_CVPR_2021_paper.html"
+        },
+        {
+            "title": "Tackling the Ill-Posedness of Super-Resolution through Adaptive Target Generation",
+            "authors": ["Y. Jo", "S. W. Oh", "P. Vajda", "S. J. Kim"],
+            "venue": "CVPR",
+            "year": 2021,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/CVPR2021/html/Jo_Tackling_the_Ill-Posedness_of_Super-Resolution_Through_Adaptive_Target_Generation_CVPR_2021_paper.html"
+        },
+        {
+            "title": "Winning the CVPR'2021 Kinetics-GEBD Challenge: Contrastive Learning Approach",
+            "authors": ["Hyolim Kang", "Jinwoo Kim", "Kyungmin Kim", "Taehyun Kim", "Seon Joo Kim"],
+            "venue": "CVPRW",
+            "year": 2021,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://arxiv.org/abs/2106.11549"
+        },
+        {
+            "title": "SRFlow-DA: Super-Resolution Using Normalizing Flow With Deep Convolutional Block",
+            "authors": ["Younghyun Jo", "Sejong Yang", "Seon Joo Kim"],
+            "venue": "CVPRW",
+            "year": 2021,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/CVPR2021W/NTIRE/html/Jo_SRFlow-DA_Super-Resolution_Using_Normalizing_Flow_With_Deep_Convolutional_Block_CVPRW_2021_paper.html"
+        },
+        {
+            "title": "Rethinking the Self-Attention in Vision Transformers",
+            "authors": ["Kyungmin Kim", "Bichen Wu", "Xiaoliang Dai", "Peizhao Zhang", "Zhicheng Yan", "Peter Vajda", "Seon Joo Kim"],
+            "venue": "CVPRW",
+            "year": 2021,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content/CVPR2021W/ECV/html/Kim_Rethinking_the_Self-Attention_in_Vision_Transformers_CVPRW_2021_paper.html"
+        },
+        {
+            "title": "Deep Space-time Video Upsampling Networks",
+            "authors": ["J. Kang", "Y. Jo", "S. W. Oh", "P. Vajda", "S. J. Kim"],
+            "venue": "ECCV",
+            "year": 2020,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://www.ecva.net/papers/eccv_2020/papers_ECCV/html/1232_ECCV_2020_paper.php"
+        },
+        {
+            "title": "Cross-Identity Motion Transfer for Arbitrary Objects through Pose-Attentive Video Reassembling",
+            "authors": ["S. Jeon", "S. Nam", "S. W. Oh", "S. J. Kim"],
+            "venue": "ECCV",
+            "year": 2020,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://www.ecva.net/papers/eccv_2020/papers_ECCV/html/4585_ECCV_2020_paper.php"
+        },
+        {
+            "title": "Unsupervised Keypoint Learning for Guiding Class-conditional Video Prediction",
+            "authors": ["Y. Kim", "S. Nam", "I. Jo", "S. J. Kim"],
+            "venue": "NeurIPS",
+            "year": 2019,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://proceedings.neurips.cc/paper/2019/hash/801272ee79cfde7fa5960571fee36b9b-Abstract.html"
+        },
+        {
+            "title": "Video Object Segmentation using Space-Time Memory Networks",
+            "authors": ["S. W. Oh", "J.-Y. Lee", "N. Xu", "S. J. Kim"],
+            "venue": "ICCV",
+            "year": 2019,
+            "topic": ["_"],
+            "category": "conference",
+            "reward": "Oral",
+            "link": "https://openaccess.thecvf.com/content_ICCV_2019/html/Oh_Video_Object_Segmentation_Using_Space-Time_Memory_Networks_ICCV_2019_paper.html"
+        },
+        {
+            "title": "Onion-Peel Networks for Deep Video Completion",
+            "authors": ["S. W. Oh", "S. H. Lee", "J.-Y. Lee", "S. J. Kim"],
+            "venue": "ICCV",
+            "year": 2019,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content_ICCV_2019/html/Oh_Onion-Peel_Networks_for_Deep_Video_Completion_ICCV_2019_paper.html"
+        },
+        {
+            "title": "Copy-and-Paste Networks for Deep Video Inpainting",
+            "authors": ["S. H. Lee", "S. W. Oh", "D.Y. Won", "S. J. Kim"],
+            "venue": "ICCV",
+            "year": 2019,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content_ICCV_2019/html/Lee_Copy-and-Paste_Networks_for_Deep_Video_Inpainting_ICCV_2019_paper.html"
+        },
+        {
+            "title": "Fast User-Guided Video Object Segmentation by Interaction-and-Propagation Networks",
+            "authors": ["S. W. Oh", "J.-Y. Lee", "N. Xu", "S. J. Kim"],
+            "venue": "CVPR",
+            "year": 2019,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content_CVPR_2019/html/Oh_Fast_User-Guided_Video_Object_Segmentation_by_Interaction-And-Propagation_Networks_CVPR_2019_paper.html"
+        },
+        {
+            "title": "End-to-end Time-lapse Video Synthesis from a Single Outdoor Image",
+            "authors": ["S. Nam", "C. Ma", "M. Chai", "W. Brendel", "N. Xu", "S. J. Kim"],
+            "venue": "CVPR",
+            "year": 2019,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content_CVPR_2019/html/Nam_End-To-End_Time-Lapse_Video_Synthesis_From_a_Single_Outdoor_Image_CVPR_2019_paper.html"
+        },
+        {
+            "title": "Investigating Loss Functions for Extreme Super-Resolution",
+            "authors": ["Y. Jo", "S. Yang", "S. J. Kim"],
+            "venue": "CVPRW",
+            "year": 2020,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content_CVPRW_2020/html/w31/Jo_Investigating_Loss_Functions_for_Extreme_Super-Resolution_CVPRW_2020_paper.html"
+        },
+        {
+            "title": "Text-Adaptive Generative Adversarial Networks: Manipulating Images with Natural Language",
+            "authors": ["S. Nam", "Y. Kim", "S. J. Kim"],
+            "venue": "NeurIPS",
+            "year": 2018,
+            "topic": ["_"],
+            "category": "conference",
+            "reward": "Spotlight",
+            "link": "https://proceedings.neurips.cc/paper_files/paper/2018/hash/d645920e395fedad7bbbed0eca3fe2e0-Abstract.html"
+        },
+        {
+            "title": "Teaching Machines to Understand Baseball Games: Large Scale Baseball Video Database for Multiple Video Understanding Tasks",
+            "authors": ["M. Shim*", "Y. H. Kim*", "K. Kim*", "S. J. Kim"],
+            "venue": "ECCV",
+            "year": 2018,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://www.ecva.net/papers/eccv_2018/papers_ECCV/html/Minho_Shim_Teaching_Machines_to_ECCV_2018_paper.php"
+        },
+        {
+            "title": "Deep Video Super-Resolution Network Using Dynamic Upsampling Filters Without Explicit Motion Compensation",
+            "authors": ["Y. Jo", "S. W. Oh", "J. Y. Kang", "S. J. Kim"],
+            "venue": "CVPR",
+            "year": 2018,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content_cvpr_2018/html/Jo_Deep_Video_Super-Resolution_CVPR_2018_paper.html"
+        },
+        {
+            "title": "Fast Video Object Segmentation by Reference-Guided Mask Propagation",
+            "authors": ["S. W. Oh", "J.-Y. Lee", "K. Sunkavalli", "S. J. Kim"],
+            "venue": "CVPR",
+            "year": 2018,
+            "topic": ["_"],
+            "category": "conference",
+            "reward": "Spotlight",
+            "link": "https://openaccess.thecvf.com/content_cvpr_2018/html/Oh_Fast_Video_Object_CVPR_2018_paper.html"
+        },
+        {
+            "title": "EPINET: A Fully-Convolutional Neural Network Using Epipolar Geometry for Depth from Light Field Images",
+            "authors": ["C. H. Shin", "H. G. Jeon", "Y. J. Lee", "I. S. Kweon", "S. J. Kim"],
+            "venue": "CVPR",
+            "year": 2018,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content_cvpr_2018/html/Shin_EPINET_A_Fully-Convolutional_CVPR_2018_paper.html"
+        },
+        {
+            "title": "Modelling the Scene Dependent Imaging in Cameras with a Deep Neural Network",
+            "authors": ["S. Nam", "S. J. Kim"],
+            "venue": "ICCV",
+            "year": 2017,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content_iccv_2017/html/Nam_Modelling_the_Scene_ICCV_2017_paper.html"
+        },
+        {
+            "title": "Do It Yourself Hyperspectral Imaging with Everyday Digital Cameras",
+            "authors": ["S. W. Oh", "M. S. Brown", "M. Pollefeys", "S. J. Kim"],
+            "venue": "CVPR",
+            "year": 2016,
+            "topic": ["_"],
+            "category": "conference",
+            "reward": "Spotlight",
+            "link": "https://openaccess.thecvf.com/content_cvpr_2016/html/Oh_Do_It_Yourself_CVPR_2016_paper.html"
+        },
+        {
+            "title": "A Holistic Approach to Cross-Channel Image Noise Modeling and its Application to Image Denoising",
+            "authors": ["S. Nam", "Y. B. Hwang", "Y. Matsushita", "S. J. Kim"],
+            "venue": "CVPR",
+            "year": 2016,
+            "topic": ["_"],
+            "category": "conference",
+            "reward": "Spotlight",
+            "link": "https://openaccess.thecvf.com/content_cvpr_2016/html/Nam_A_Holistic_Approach_CVPR_2016_paper.html"
+        },
+        {
+            "title": "Complementary Sets of Shutter Sequences for Motion Deblurring",
+            "authors": ["H.-G. Jeon", "J.-Y. Lee", "Y. Han", "S. J. Kim", "I.S. Kweon"],
+            "venue": "ICCV",
+            "year": 2015,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content_iccv_2015/html/Jeon_Complementary_Sets_of_ICCV_2015_paper.html"
+        },
+        {
+            "title": "Robust Stereo Matching Using Probabilistic Laplacian Surface Propagation",
+            "authors": ["S. Kim", "S. Ryu", "B. Ham", "S. J. Kim", "K. Sohn"],
+            "venue": "ACCV",
+            "year": 2014,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-319-16865-4_24"
+        },
+        {
+            "title": "Color Transfer Using Probabilistic Moving Least Squares",
+            "authors": ["Y. B. Hwang", "J.-Y Lee", "I. S. Kwon", "S. J. Kim"],
+            "venue": "CVPR",
+            "year": 2014,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content_cvpr_2014/html/Hwang_Color_Transfer_Using_2014_CVPR_paper.html"
+        },
+        {
+            "title": "Fluttering Pattern Generation using Modified Legendre Sequence for Coded Exposure Imaging",
+            "authors": ["H.-G. Jeon", "J.-Y. Lee", "Y. Han", "S. J. Kim", "I.S. Kweon"],
+            "venue": "ICCV",
+            "year": 2013,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://openaccess.thecvf.com/content_iccv_2013/html/Jeon_Fluttering_Pattern_Generation_2013_ICCV_paper.html"
+        },
+        {
+            "title": "Color-aware Regularization for Gradient Domain Image Manipulation",
+            "authors": ["F. Deng", "S. J. Kim", "Y.-W. Tai", "M. S. Brown"],
+            "venue": "ACCV",
+            "year": 2012,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-642-37447-0_30"
+        },
+        {
+            "title": "Nonuniform Lattice Regression for Modeling the Camera Imaging Pipeline",
+            "authors": ["H. Lin", "Z. Lu", "S. J. Kim", "M. S. Brown"],
+            "venue": "ECCV",
+            "year": 2012,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-642-33718-5_40"
+        },
+        {
+            "title": "Brush-and-Drag: A Multi-touch Interface For Photo Triaging",
+            "authors": ["S. J. Kim", "H. Ng", "S. Winkler", "P. Song", "C.-W. Fu"],
+            "venue": "MobileHCI",
+            "year": 2012,
+            "month": 9,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://dl.acm.org/doi/10.1145/2371664.2371698"
+        },
+        {
+            "title": "Nonlinear Camera Response Functions and Image Deblurring",
+            "authors": ["S. Kim", "Y.-W. Tai", "S. J. Kim", "M. S. Brown", "Y. Matsushita"],
+            "venue": "CVPR",
+            "year": 2012,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://ieeexplore.ieee.org/abstract/document/6247654"
+        },
+        {
+            "title": "Revisiting Radiometric Calibration for Color Computer Vision",
+            "authors": ["H. Lin", "S. J. Kim", "S. Susstrunk", "M. S. Brown"],
+            "venue": "ICCV",
+            "year": 2011,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://ieeexplore.ieee.org/abstract/document/6126234"
+        },
+        {
+            "title": "Constructing Image Panoramas using Dual-Homography Warping",
+            "authors": ["J. Gao", "S. J. Kim", "M. S. Brown"],
+            "venue": "CVPR",
+            "year": 2011,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://ieeexplore.ieee.org/document/5995433"
+        },
+        {
+            "title": "Colorization for Single Image Super Resolution",
+            "authors": ["S. Liu", "M. S. Brown", "S. J. Kim", "Y.-W. Tai"],
+            "venue": "ECCV",
+            "year": 2010,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-642-15567-3_24"
+        },
+        {
+            "title": "A model change detection approach to dynamic scene modeling",
+            "authors": ["S. J. Kim", "G. Doretto", "J. Rittscher", "P. Tu", "N. Krahnstoever", "M. Pollefeys"],
+            "venue": "AVSS",
+            "year": 2009,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://ieeexplore.ieee.org/document/5279913"
+        },
+        {
+            "title": "Radiometric Calibration with Illumination Change for Outdoor Scene Analysis",
+            "authors": ["S. J. Kim", "J.-M. Frahm", "M. Pollefeys"],
+            "venue": "CVPR",
+            "year": 2008,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://ieeexplore.ieee.org/document/4587648"
+        },
+        {
+            "title": "Joint Feature Tracking and Radiometric Calibration from Auto-Exposure Video",
+            "authors": ["S. J. Kim", "J.-M. Frahm", "M. Pollefeys"],
+            "venue": "ICCV",
+            "year": 2007,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://ieeexplore.ieee.org/document/4408945"
+        },
+        {
+            "title": "Gain Adaptive Real-Time Stereo Streaming",
+            "authors": ["S. J. Kim", "D. Gallup", "J.-M. Frahm", "A. Akbarzadeh", "Q. Yang", "R. Yang", "D. Nister", "M. Pollefeys"],
+            "venue": "ICVS",
+            "year": 2007,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://biecoll.ub.uni-bielefeld.de/index.php/icvs/article/view/216"
+        },
+        {
+            "title": "Radiometric Alignment of Image Sequences",
+            "authors": ["S. J. Kim", "M. Pollefeys"],
+            "venue": "CVPR",
+            "year": 2004,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://ieeexplore.ieee.org/document/1315093"
+        },
+        {
+            "title": "High-Resolution Multiscale Panoramic Mosaics from Pan-Tilt-Zoom Cameras",
+            "authors": ["S. Sinha", "M. Pollefeys", "S. J. Kim"],
+            "venue": "ICVGIP",
+            "year": 2004,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://www.academia.edu/77595570/High_resolution_multiscale_panoramic_mosaics_from_pan_tilt_zoom_cameras"
+        },
+        {
+            "title": "Algorithm for Detection and Elimination of False Minutiae in Fingerprint Images",
+            "authors": ["S. J. Kim", "D. J. Lee", "J. Kim"],
+            "venue": "AVBPA",
+            "year": 2001,
+            "topic": ["_"],
+            "category": "conference",
+            "link": "https://link.springer.com/chapter/10.1007/3-540-45344-X_34"
+        }
+    ];
+    const journal_papers = [
+        {
+            "title": "2PESNet: Towards online processing of temporal action localization",
+            "authors": ["Y. H. Kim", "S. Nam", "S. J. Kim"],
+            "venue": "PR",
+            "year": 2022,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://www.sciencedirect.com/science/article/pii/S0031320322003521"
+        },
+        {
+            "title": "Space-time Memory Networks for Video Object Segmentation with User Guidance",
+            "authors": ["S. W. Oh", "J.-Y. Lee", "N. Xu", "S. J. Kim"],
+            "venue": "TPAMI",
+            "year": 2022,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://ieeexplore.ieee.org/document/9139391"
+        },
+        {
+            "title": "Temporally Smooth Online Action Detection using Cycle-consistent Future Anticipation",
+            "authors": ["Y. H. Kim", "S. Nam", "S. J. Kim"],
+            "venue": "PR",
+            "year": 2021,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://www.sciencedirect.com/science/article/pii/S0031320321001412"
+        },
+        {
+            "title": "Probabilistic Moving Least Squares with Spatial Constraints for Nonlinear Color Transfer Between Images",
+            "authors": ["Y. B. Hwang", "J.-Y Lee", "I. S. Kwon", "S. J. Kim"],
+            "venue": "CVIU",
+            "year": 2019,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://www.sciencedirect.com/science/article/pii/S1077314218304491"
+        },
+        {
+            "title": "Building Emotional Machines: Recognizing Image Emotions through Deep Neural Networks",
+            "authors": ["H.-R. Kim", "Y-S Kim", "S. J. Kim", "I.-K. Lee"],
+            "venue": "ToM",
+            "year": 2018,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://ieeexplore.ieee.org/document/8344491"
+        },
+        {
+            "title": "Multi-Image Deblurring using Complementary Sets of Fluttering Patterns",
+            "authors": ["H.-G. Jeon", "J.-Y. Lee", "Y. Han", "S. J. Kim", "I. S. Kweon"],
+            "venue": "TIP",
+            "year": 2017,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://ieeexplore.ieee.org/document/7864319"
+        },
+        {
+            "title": "Generating Fluttering Patterns with Low Autocorrelation for Coded Exposure Imaging",
+            "authors": ["H.-G. Jeon", "J.-Y. Lee", "Y. Han", "S. J. Kim", "I. S. Kweon"],
+            "venue": "IJCV",
+            "year": 2017,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://link.springer.com/article/10.1007/s11263-016-0976-4"
+        },
+        {
+            "title": "Approaching the Computational Color Constancy as a Classification Problem through Deep Learning",
+            "authors": ["S. W.  Oh", "S. J. Kim"],
+            "venue": "PR",
+            "year": 2017,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://www.sciencedirect.com/science/article/pii/S0031320316302266"
+        },
+        {
+            "title": "Illuminant Aware Gamut-Based Color Transfer",
+            "authors": ["R. Nguyen", "S. J. Kim", "M. S. Brown"],
+            "venue": "CGF",
+            "year": 2014,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://dl.acm.org/doi/10.1111/cgf.12500"
+        },
+        {
+            "title": "Single-shot High Dynamic Range Imaging Using Coded Electronic Shutter",
+            "authors": ["H. Cho", "S. J. Kim", "S. Lee"],
+            "venue": "CGF",
+            "year": 2014,
+            "topic": ["_"],
+            "category": "journal",
+            "reward": "Best Paper Award",
+            "link": "https://dl.acm.org/doi/10.1111/cgf.12501"
+        },
+        {
+            "title": "Nonlinear Camera Response Functions and Image Deblurring: Theoretical Analysis and Practice",
+            "authors": ["Y.-W. Tai", "X. Chen", "S. Kim", "S. J. Kim", "F. Li", "J. Yang", "J. Yu", "Y. Matsushita", "M.S. Brown"],
+            "venue": "TPAMI",
+            "year": 2013,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://ieeexplore.ieee.org/document/6461888"
+        },
+        {
+            "title": "A New In-Camera Imaging Model for Color Computer Vision and its Application",
+            "authors": ["S. J. Kim", "H. Lin", "L. Zheng", "S. Susstrunk", "S. Lin", "M. S. Brown"],
+            "venue": "TPAMI",
+            "year": 2012,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://ieeexplore.ieee.org/abstract/document/6158647"
+        },
+        {
+            "title": "Creating Picture Legends for Group Photos",
+            "authors": ["J. Gao", "S. J. Kim", "M. S. Brown"],
+            "venue": "CGF",
+            "year": 2012,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "http://www.cse.yorku.ca/~mbrown/pdf/eg2012_picture_legend.pdf"
+        },
+        {
+            "title": "Visual Enhancement of Old Documents with Hyperspectral Imaging",
+            "authors": ["S. J. Kim", "F. Deng", "M. S. Brown"],
+            "venue": "PR",
+            "year": 2011,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://www.sciencedirect.com/science/article/pii/S0031320311000045"
+        },
+        {
+            "title": "Interactive Visualization of Hyperspectral Images of Historical Documents",
+            "authors": ["S. J. Kim", "S. Zhou", "F. Deng", "C.-W. Fu", "M. S. Brown"],
+            "venue": "TVC",
+            "year": 2010,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://ieeexplore.ieee.org/document/5613485"
+        },
+        {
+            "title": "Joint Radiometric Calibration and Feature Tracking System with an Application to Stereo",
+            "authors": ["S. J. Kim", "D. Gallup", "J.-M. Frahm", "M. Pollefeys"],
+            "venue": "CVIU",
+            "year": 2010,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://www.sciencedirect.com/science/article/pii/S1077314210000342"
+        },
+        {
+            "title": "Detailed Real-Time Urban 3D Reconstruction From Video",
+            "authors": ["M. Pollefeys", "D. Nister", "J.-M. Frahm", "A. Akbarzadeh", "P. Mordohai", "B. Clipp", "C. Engels", "D. Gallup", "S. J. Kim", "P. Merrell", "C. Salmi", "S. Sinha", "B. Talton", "L. Wang", "Q. Yang", "H. Stewenius", "R. Yang", "G. Welch", "H. Towles"],
+            "venue": "IJCV",
+            "year": 2008,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://link.springer.com/article/10.1007/s11263-007-0086-4"
+        },
+        {
+            "title": "Robust Radiometric Calibration and Vignetting Correction",
+            "authors": ["S. J. Kim", "M. Pollefeys"],
+            "venue": "TPAMI",
+            "year": 2008,
+            "topic": ["_"],
+            "category": "journal",
+            "link": "https://ieeexplore.ieee.org/abstract/document/4359347/"
+        }
+    ];
+    const preprint_papers = [
+        {
+            "title": "Exploring Scalability of Self-Training for Open-Vocabulary Temporal Action Localization",
+            "authors": ["Jeongseok Hyun", "Su Ho Han", "Hyolim Kang", "Joon-Young Lee", "Seon Joo Kim"],
+            "venue": "arxiv",
+            "year": 2024,
+            "topic": ["Video Vision"],
+            "category": "preprint",
+            "link": "https://arxiv.org/abs/2407.07024"
+        }
+    ];
+    const all_papers = [...conference_papers, ...journal_papers, ...preprint_papers];
+
+    const sortPapers = (papers) => {
+        return papers.sort((a, b) => {
+          // Sort by year in descending order
+          if (b.year !== a.year) {
+            return b.year - a.year;
+          }
+      
+          // Define the order of categories
+          const categoryOrder = {
+            conference: 1,
+            journal: 2,
+            preprint: 3
+          };
+      
+          // Sort by category based on the defined order
+          if (categoryOrder[a.category] !== categoryOrder[b.category]) {
+            return categoryOrder[a.category] - categoryOrder[b.category];
+          }
+      
+          // If year and category are the same, maintain the original order
+          return 0;
+        });
+      };
+    const papers = sortPapers(all_papers);
+
+    function filterPapers(category) {
+        const buttons = document.querySelectorAll('.button');
+        buttons.forEach(button => {
+            if (button.textContent.toLowerCase() === category) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+
+        const paperList = document.getElementById('paper-list');
+        paperList.innerHTML = '';
+        const filteredPapers = category === 'all' ? papers : papers.filter(paper => paper.category === category);
+        filteredPapers.forEach(paper => {
+            const paperItem = document.createElement('div');
+            let reward = "";
+            if (paper.hasOwnProperty('reward')) {
+              reward = ` <b>(${paper.reward})</b>`;
+            }
+            paperItem.className = 'paper';
+
+            if (paper.link === "#"){
+                paperItem.innerHTML = `<div><strong>${paper.title}</strong></div>
+                                       <div>
+                                       <span style="color: #3d85c6; font-style: italic;">
+                                           ${paper.venue} ${paper.year}${reward}
+                                       </span> - ${paper.authors.join(", ")}
+                                       </div>`;
+            } else{
+                paperItem.innerHTML = `<a href=${paper.link} style="text-decoration: none; color: inherit;">
+                                    <div><strong>${paper.title}</strong></div>
+                                    <div>
+                                        <span style="color: #3d85c6; font-style: italic;">
+                                            ${paper.venue} ${paper.year}${reward}
+                                        </span> - ${paper.authors.join(", ")}
+                                    </div>
+                                    </a>`;
+            }
+            paperList.appendChild(paperItem);
+        });
+    }
+
+    // Initialize the page with all papers visible
+    window.onload = function() {
+        filterPapers('all');
+        document.querySelector('.filter-buttons button').classList.add('active');
+    };
+</script>
+</body>
+</html>
