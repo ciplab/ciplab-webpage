@@ -1,0 +1,165 @@
+[
+    {
+        "title": "2PESNet: Towards online processing of temporal action localization",
+        "authors": ["Y. H. Kim", "S. Nam", "S. J. Kim"],
+        "venue": "PR",
+        "year": 2022,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://www.sciencedirect.com/science/article/pii/S0031320322003521"
+    },
+    {
+        "title": "Space-time Memory Networks for Video Object Segmentation with User Guidance",
+        "authors": ["S. W. Oh", "J.-Y. Lee", "N. Xu", "S. J. Kim"],
+        "venue": "TPAMI",
+        "year": 2022,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://ieeexplore.ieee.org/document/9139391"
+    },
+    {
+        "title": "Temporally Smooth Online Action Detection using Cycle-consistent Future Anticipation",
+        "authors": ["Y. H. Kim", "S. Nam", "S. J. Kim"],
+        "venue": "PR",
+        "year": 2021,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://www.sciencedirect.com/science/article/pii/S0031320321001412"
+    },
+    {
+        "title": "Probabilistic Moving Least Squares with Spatial Constraints for Nonlinear Color Transfer Between Images",
+        "authors": ["Y. B. Hwang", "J.-Y Lee", "I. S. Kwon", "S. J. Kim"],
+        "venue": "CVIU",
+        "year": 2019,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://www.sciencedirect.com/science/article/pii/S1077314218304491"
+    },
+    {
+        "title": "Building Emotional Machines: Recognizing Image Emotions through Deep Neural Networks",
+        "authors": ["H.-R. Kim", "Y-S Kim", "S. J. Kim", "I.-K. Lee"],
+        "venue": "ToM",
+        "year": 2018,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://ieeexplore.ieee.org/document/8344491"
+    },
+    {
+        "title": "Multi-Image Deblurring using Complementary Sets of Fluttering Patterns",
+        "authors": ["H.-G. Jeon", "J.-Y. Lee", "Y. Han", "S. J. Kim", "I. S. Kweon"],
+        "venue": "TIP",
+        "year": 2017,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://ieeexplore.ieee.org/document/7864319"
+    },
+    {
+        "title": "Generating Fluttering Patterns with Low Autocorrelation for Coded Exposure Imaging",
+        "authors": ["H.-G. Jeon", "J.-Y. Lee", "Y. Han", "S. J. Kim", "I. S. Kweon"],
+        "venue": "IJCV",
+        "year": 2017,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://link.springer.com/article/10.1007/s11263-016-0976-4"
+    },
+    {
+        "title": "Approaching the Computational Color Constancy as a Classification Problem through Deep Learning",
+        "authors": ["S. W.  Oh", "S. J. Kim"],
+        "venue": "PR",
+        "year": 2017,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://www.sciencedirect.com/science/article/pii/S0031320316302266"
+    },
+    {
+        "title": "Illuminant Aware Gamut-Based Color Transfer",
+        "authors": ["R. Nguyen", "S. J. Kim", "M. S. Brown"],
+        "venue": "CGF",
+        "year": 2014,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://dl.acm.org/doi/10.1111/cgf.12500"
+    },
+    {
+        "title": "Single-shot High Dynamic Range Imaging Using Coded Electronic Shutter",
+        "authors": ["H. Cho", "S. J. Kim", "S. Lee"],
+        "venue": "CGF",
+        "year": 2014,
+        "topic": ["_"],
+        "category": "journal",
+        "reward": "Best Paper Award",
+        "link": "https://dl.acm.org/doi/10.1111/cgf.12501"
+    },
+    {
+        "title": "Nonlinear Camera Response Functions and Image Deblurring: Theoretical Analysis and Practice",
+        "authors": ["Y.-W. Tai", "X. Chen", "S. Kim", "S. J. Kim", "F. Li", "J. Yang", "J. Yu", "Y. Matsushita", "M.S. Brown"],
+        "venue": "TPAMI",
+        "year": 2013,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://ieeexplore.ieee.org/document/6461888"
+    },
+    {
+        "title": "A New In-Camera Imaging Model for Color Computer Vision and its Application",
+        "authors": ["S. J. Kim", "H. Lin", "L. Zheng", "S. Susstrunk", "S. Lin", "M. S. Brown"],
+        "venue": "TPAMI",
+        "year": 2012,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://ieeexplore.ieee.org/abstract/document/6158647"
+    },
+    {
+        "title": "Creating Picture Legends for Group Photos",
+        "authors": ["J. Gao", "S. J. Kim", "M. S. Brown"],
+        "venue": "CGF",
+        "year": 2012,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "http://www.cse.yorku.ca/~mbrown/pdf/eg2012_picture_legend.pdf"
+    },
+    {
+        "title": "Visual Enhancement of Old Documents with Hyperspectral Imaging",
+        "authors": ["S. J. Kim", "F. Deng", "M. S. Brown"],
+        "venue": "PR",
+        "year": 2011,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://www.sciencedirect.com/science/article/pii/S0031320311000045"
+    },
+    {
+        "title": "Interactive Visualization of Hyperspectral Images of Historical Documents",
+        "authors": ["S. J. Kim", "S. Zhou", "F. Deng", "C.-W. Fu", "M. S. Brown"],
+        "venue": "TVC",
+        "year": 2010,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://ieeexplore.ieee.org/document/5613485"
+    },
+    {
+        "title": "Joint Radiometric Calibration and Feature Tracking System with an Application to Stereo",
+        "authors": ["S. J. Kim", "D. Gallup", "J.-M. Frahm", "M. Pollefeys"],
+        "venue": "CVIU",
+        "year": 2010,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://www.sciencedirect.com/science/article/pii/S1077314210000342"
+    },
+    {
+        "title": "Detailed Real-Time Urban 3D Reconstruction From Video",
+        "authors": ["M. Pollefeys", "D. Nister", "J.-M. Frahm", "A. Akbarzadeh", "P. Mordohai", "B. Clipp", "C. Engels", "D. Gallup", "S. J. Kim", "P. Merrell", "C. Salmi", "S. Sinha", "B. Talton", "L. Wang", "Q. Yang", "H. Stewenius", "R. Yang", "G. Welch", "H. Towles"],
+        "venue": "IJCV",
+        "year": 2008,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://link.springer.com/article/10.1007/s11263-007-0086-4"
+    },
+    {
+        "title": "Robust Radiometric Calibration and Vignetting Correction",
+        "authors": ["S. J. Kim", "M. Pollefeys"],
+        "venue": "TPAMI",
+        "year": 2008,
+        "topic": ["_"],
+        "category": "journal",
+        "link": "https://ieeexplore.ieee.org/abstract/document/4359347/"
+    }
+]
