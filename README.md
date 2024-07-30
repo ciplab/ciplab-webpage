@@ -1,6 +1,6 @@
-# ciplab_publication (tmp)
+# CIPLab Publication Page
 
-This is temporary repository for publicly saving CIPLab's publication data.
+This is repository for publicly saving CIPLab's publication data.
 
 Please add the paper list following the structure:
 ```
