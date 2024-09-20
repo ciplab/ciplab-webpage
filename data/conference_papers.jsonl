@@ -1,5 +1,14 @@
 [
     {
+        "title": "CLIP-Guided Attribute Aware Pretraining for Generalizable Image Quality Assessment",
+        "authors": ["Daekyu Kwon", "Dongyoung Kim", "Sehwan Ki", "Younghyun Jo", "Hyong-Euk Lee", "Seon Joo Kim"],
+        "venue": "ACCV",
+        "year": 2024,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "https://arxiv.org/abs/2406.01020"
+    },
+    {
         "title": "Accelerating Large Image Super-Resolution Networks with Pixel-Level Classification",
         "authors": ["Jinho Jeong", "Jinwoo Kim", "Younghyun Jo", "Seon Joo Kim"],
         "venue": "ECCV",
