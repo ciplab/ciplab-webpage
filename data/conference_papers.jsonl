@@ -1,5 +1,14 @@
 [
     {
+        "title": "Robust and Consistent Online Video Instance Segmentation via Instance Mask Propagation",
+        "authors": ["Miran Heo", "Seoung Wug Oh", "Seon Joo Kim", "Joon-Young Lee"],
+        "venue": "AAAI",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
         "title": "Exploring Scalability of Self-Training for Open-Vocabulary Temporal Action Localization",
         "authors": ["Jeongseok Hyun", "Su Ho Han", "Hyolim Kang", "Joon-Young Lee", "Seon Joo Kim"],
         "venue": "WACV",
