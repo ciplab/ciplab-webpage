@@ -10,7 +10,7 @@
     },
     {
         "title": "ORIDa: Object-centric Real-world Image Composition Dataset",
-        "authors": ["Jinwoo Kim", Sangmin Han", "Jinho Jeong", "Jiwoo Choi", "Dongyoung Kim", "Seon Joo Kim"],
+        "authors": ["Jinwoo Kim", "Sangmin Han", "Jinho Jeong", "Jiwoo Choi", "Dongyoung Kim", "Seon Joo Kim"],
         "venue": "CVPR",
         "year": 2025,
         "topic": ["_"],
