@@ -1,5 +1,32 @@
 [
     {
+        "title": "Omni-RGPT: Unifying Image and Video Region-level Understanding via Token Marks",
+        "authors": ["Miran Heo", "Seoung Wug Oh", "Seon Joo Kim", "Joon-Young Lee"],
+        "venue": "CVPR",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "https://miranheo.github.io/omni-rgpt/"
+    },
+    {
+        "title": "ORIDa: Object-centric Real-world Image Composition Dataset",
+        "authors": ["Jinwoo Kim", Sangmin Han", "Jinho Jeong", "Jiwoo Choi", "Dongyoung Kim", "Seon Joo Kim"],
+        "venue": "CVPR",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
+        "title": "Latent space Super-Resolution for Higher-Resolution Image Generation with Diffusion Models",
+        "authors": ["Jinho Jeong", "Sangmin Han", "Jinwoo Kim", "Seon Joo Kim"],
+        "venue": "CVPR",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
         "title": "Robust and Consistent Online Video Instance Segmentation via Instance Mask Propagation",
         "authors": ["Miran Heo", "Seoung Wug Oh", "Seon Joo Kim", "Joon-Young Lee"],
         "venue": "AAAI",
