@@ -1,7 +1,7 @@
 [
     {
         "title": "Omni-RGPT: Unifying Image and Video Region-level Understanding via Token Marks",
-        "authors": ["Miran Heo", "Seoung Wug Oh", "Seon Joo Kim", "Joon-Young Lee"],
+        "authors": ["Miran Heo", "Min-Hung Chen", "De-An Huang", "Sifei Liu", "Subhashree Radhakrishnan", "Seon Joo Kim", "Yu-Chiang Frank Wang", "Ryo Hachiuma"],
         "venue": "CVPR",
         "year": 2025,
         "topic": ["_"],
