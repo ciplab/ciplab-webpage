@@ -1,5 +1,14 @@
 [
     {
+        "title": "Visual Fidelity vs. Robustness: Trade-Off Analysis of Image Adversarial Watermark Mitigated by SSIM Loss",
+        "authors": ["Jiwoo Choi", "Jinwoo Kim", "Sejong Yang", "Seon Joo Kim"],
+        "venue": "ICLRW",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
         "title": "Omni-RGPT: Unifying Image and Video Region-level Understanding via Token Marks",
         "authors": ["Miran Heo", "Min-Hung Chen", "De-An Huang", "Sifei Liu", "Subhashree Radhakrishnan", "Seon Joo Kim", "Yu-Chiang Frank Wang", "Ryo Hachiuma"],
         "venue": "CVPR",
