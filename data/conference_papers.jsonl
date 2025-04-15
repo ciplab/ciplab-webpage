@@ -33,7 +33,7 @@
         "year": 2025,
         "topic": ["_"],
         "category": "conference",
-        "link": "#"
+        "link": "https://arxiv.org/abs/2503.18446"
     },
     {
         "title": "Robust and Consistent Online Video Instance Segmentation via Instance Mask Propagation",
