@@ -1,5 +1,14 @@
 [
     {
+        "title": "A Training-Free, Task-Agnostic Framework for Enhancing MLLM Performance on High-Resolution Images",
+        "authors": ["Jaeseong Lee*", "Yeeun Choi*", "Heechan Choi*", "Hanjung Kim", "Seon Joo Kim"],
+        "venue": "CVPRW",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
         "title": "Visual Fidelity vs. Robustness: Trade-Off Analysis of Image Adversarial Watermark Mitigated by SSIM Loss",
         "authors": ["Jiwoo Choi", "Jinwoo Kim", "Sejong Yang", "Seon Joo Kim"],
         "venue": "ICLRW",
