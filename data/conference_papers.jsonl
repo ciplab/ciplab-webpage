@@ -1,5 +1,14 @@
 [
     {
+        "title": "Bayesian Neural Scaling Laws Extrapolation with Prior-Fitted Networks",
+        "authors": ["Dongwoo Lee*", "Dong Bok Lee*", "Steven Adriaensen", "Juho Lee", "Sung Ju Hwang", "Frank Hutter", "Seon Joo Kim", "Hae Beom Lee"],
+        "venue": "ICML",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
         "title": "A Training-Free, Task-Agnostic Framework for Enhancing MLLM Performance on High-Resolution Images",
         "authors": ["Jaeseong Lee*", "Yeeun Choi*", "Heechan Choi*", "Hanjung Kim", "Seon Joo Kim"],
         "venue": "CVPRW",
