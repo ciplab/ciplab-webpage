@@ -1,14 +1,5 @@
 [
     {
-        "title": "UniSkill: Imitating Human Videos via Cross-Embodiment Skill Representations",
-        "authors": ["Hanjung Kim*", "Jaehyun Kang*", "Hyolim Kang", "Meedeum Cho", "Seon Joo Kim", "Youngwoon Lee"],
-        "venue": "arxiv",
-        "year": 2025,
-        "topic": ["_"],
-        "category": "preprint",
-        "link": "https://kimhanjung.github.io/UniSkill/"
-    },
-    {
         "title": "CCMNet: Leveraging Calibrated Color Correction Matrices for Cross-Camera Color Constancy",
         "authors": ["Dongyoung Kim", "Mahmoud Afifi", "Dongyun Kim", "Michael S. Brown", "Seon Joo Kim"],
         "venue": "arxiv",

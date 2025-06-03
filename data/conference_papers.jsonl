@@ -1,5 +1,14 @@
 [
     {
+        "title": "UniSkill: Imitating Human Videos via Cross-Embodiment Skill Representations",
+        "authors": ["Hanjung Kim*", "Jaehyun Kang*", "Hyolim Kang", "Meedeum Cho", "Seon Joo Kim", "Youngwoon Lee"],
+        "venue": "CVPRW",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "https://kimhanjung.github.io/UniSkill/"
+    },
+    {
         "title": "Bayesian Neural Scaling Laws Extrapolation with Prior-Fitted Networks",
         "authors": ["Dongwoo Lee*", "Dong Bok Lee*", "Steven Adriaensen", "Juho Lee", "Sung Ju Hwang", "Frank Hutter", "Seon Joo Kim", "Hae Beom Lee"],
         "venue": "ICML",
