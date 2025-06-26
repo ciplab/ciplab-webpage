@@ -1,5 +1,14 @@
 [
     {
+        "title": "Training-Free Acceleration of Video LLMs via Multi-Granular Spatio-Temporal Token Merging",
+        "authors": ["Jeongseok Hyun", "Sukjun Hwang", "Su Ho Han", "Taeoh Kim", "Inwoong Lee", "Dongyoon Wee", "Joon-Young Lee", "Seon Joo Kim", "Minho Shim"],
+        "venue": "ICCV",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
         "title": "CCMNet: Leveraging Calibrated Color Correction Matrices for Cross-Camera Color Constancy",
         "authors": ["Dongyoung Kim", "Mahmoud Afifi", "Dongyun Kim", "Michael S. Brown", "Seon Joo Kim"],
         "venue": "ICCV",
