@@ -67,14 +67,12 @@
         }
         .filter-buttons {
             display: flex; /* Enable flexbox */
-            flex-wrap: wrap; /* Allow wrapping as needed */
-            text-align: center; /* Centering buttons for better mobile visibility */
             justify-content: center; /* Center-align buttons */
             padding: 10px 0; /* Padding for better spacing */
         }
         .filter-buttons button {
             flex-grow: 1; /* Allows buttons to grow and fill the space */
-            flex-basis: calc(25% - 10px); /* Calculate width minus margin */
+            flex-basis: calc(33.333% - 10px); /* Distribute 3 buttons evenly */
             text-align: center; /* Ensure text is centered */
             font-size: 0.9em;
             background-color: #a9b7d1;
@@ -92,18 +90,6 @@
         }
         .filter-buttons button:hover {
             background-color: #163a70;
-        }
-        /* Specific styles for 'All' button to take full width when wrapping occurs */
-        .filter-buttons .all-button {
-                order: -1; /* Make it always the first */
-        }
-        @media (max-width: 800px) {
-            .filter-buttons .all-button {
-                flex-basis: 100%; /* Take full width */
-            }
-            .filter-buttons button:not(.all-button) {
-                flex-basis: calc(33.33% - 20px); /* Adjust for 3 buttons per row when 'All' is full width */
-            }
         }
 
         .paper-list {
@@ -132,14 +118,12 @@
     <div class="container">
         <div class="instruction-text">&nbsp&nbsp*Clicking each box will take you to the corresponding paper or project page.</div>
         <div class="filter-buttons">
-            <button class="button all-button" onclick="filterPapers('all')">All</button>
-            <button class="button" onclick="filterPapers('conference')">Conference</button>
-            <button class="button" onclick="filterPapers('journal')">Journal</button>
+            <button class="button" onclick="filterPapers('conference & journal')">Conference & Journal</button>
+            <button class="button" onclick="filterPapers('workshop')">Workshop</button>
             <button class="button" onclick="filterPapers('preprint')">Preprint</button>
         </div>
         <div id="paper-list" class="paper-list">
-            <!-- Paper items will be injected here -->
-        </div>
+            </div>
     </div>
 <script>
     async function fetch_data(tgt_url) {
@@ -169,7 +153,7 @@
         const preprint_promise = fetch_data(preprint_url);
         [conference_papers, journal_papers, preprint_papers] = await Promise.all([conference_promise, journal_promise, preprint_promise]);
     }
-    
+     
     function sortPapers(papers) {
             return papers.sort((a, b) => {
             // Sort by year in descending order
@@ -181,7 +165,8 @@
             const categoryOrder = {
                 conference: 1,
                 journal: 2,
-                preprint: 3
+                workshop: 3,
+                preprint: 4
             };
 
             // Sort by category based on the defined order
@@ -195,9 +180,9 @@
     }
 
     function filterPapers(category) {
-        const buttons = document.querySelectorAll('.button');
+        const buttons = document.querySelectorAll('.filter-buttons .button');
         buttons.forEach(button => {
-            if (button.textContent.toLowerCase() === category) {
+            if (button.textContent.toLowerCase() === category.toLowerCase()) {
                 button.classList.add('active');
             } else {
                 button.classList.remove('active');
@@ -206,34 +191,71 @@
 
         const paperList = document.getElementById('paper-list');
         paperList.innerHTML = '';
-        const filteredPapers = category === 'all' ? papers : papers.filter(paper => paper.category === category);
-        filteredPapers.forEach(paper => {
-            const paperItem = document.createElement('div');
-            let reward = "";
-            if (paper.hasOwnProperty('reward')) {
-              reward = ` <b>(${paper.reward})</b>`;
-            }
-            paperItem.className = 'paper';
+        
+        let filteredPapers;
+        switch(category) {
+            case 'conference & journal':
+                filteredPapers = papers.filter(paper => paper.category === 'conference' || paper.category === 'journal');
+                break;
+            case 'workshop':
+                filteredPapers = papers.filter(paper => paper.category === 'workshop');
+                break;
+            case 'preprint':
+                filteredPapers = papers.filter(paper => paper.category === 'preprint');
+                break;
+            default:
+                filteredPapers = papers;
+        }
 
-            if (paper.link === "#"){
-                paperItem.innerHTML = `<div><strong>${paper.title}</strong></div>
-                                       <div>
-                                       <span style="color: #3d85c6; font-style: italic;">
-                                           ${paper.venue} ${paper.year}${reward}
-                                       </span> - ${paper.authors.join(", ")}
-                                       </div>`;
-            } else{
-                paperItem.innerHTML = `<a href=${paper.link} style="text-decoration: none; color: inherit;">
-                                    <div><strong>${paper.title}</strong></div>
-                                    <div>
-                                        <span style="color: #3d85c6; font-style: italic;">
-                                            ${paper.venue} ${paper.year}${reward}
-                                        </span> - ${paper.authors.join(", ")}
-                                    </div>
-                                    </a>`;
-            }
-            paperList.appendChild(paperItem);
-        });
+        if (category === 'preprint' && filteredPapers.length === 0) {
+            // *** START: REVISED JOKES SECTION ***
+            const jokes = [
+                "All our preprints have graduated! You can find them in the 'Conference & Journal' sections. 🎓🎉",
+                "Achievement Unlocked: All Clear! Every pending paper has been peer-reviewed and published. 🏆",
+                "The submission pipeline is currently empty—everything was accepted! Time to brew more coffee for the next big ideas. ☕️💡",
+                "Good news travels fast! Our preprints were accepted so quickly, we didn't have time to list them here. 🚀",
+                "The nest is empty! Our preprints have all found prestigious homes in top-tier venues. Check them out there! 🕊️"
+            ];
+            // *** END: REVISED JOKES SECTION ***
+            const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+            
+            const jokeItem = document.createElement('div');
+            jokeItem.className = 'paper'; 
+            jokeItem.style.textAlign = 'center';
+            jokeItem.style.fontStyle = 'italic';
+            jokeItem.style.color = '#666';
+            jokeItem.innerHTML = `<p style="font-size: 1.1em; margin: 0;">${randomJoke}</p>`;
+            paperList.appendChild(jokeItem);
+
+        } else if (filteredPapers.length > 0) {
+            filteredPapers.forEach(paper => {
+                const paperItem = document.createElement('div');
+                let reward = "";
+                if (paper.hasOwnProperty('reward')) {
+                  reward = ` <b>(${paper.reward})</b>`;
+                }
+                paperItem.className = 'paper';
+
+                if (paper.link === "#"){
+                    paperItem.innerHTML = `<div><strong>${paper.title}</strong></div>
+                                           <div>
+                                           <span style="color: #3d85c6; font-style: italic;">
+                                               ${paper.venue} ${paper.year}${reward}
+                                           </span> - ${paper.authors.join(", ")}
+                                           </div>`;
+                } else{
+                    paperItem.innerHTML = `<a href=${paper.link} style="text-decoration: none; color: inherit;">
+                                        <div><strong>${paper.title}</strong></div>
+                                        <div>
+                                            <span style="color: #3d85c6; font-style: italic;">
+                                                ${paper.venue} ${paper.year}${reward}
+                                            </span> - ${paper.authors.join(", ")}
+                                        </div>
+                                        </a>`;
+                }
+                paperList.appendChild(paperItem);
+            });
+        }
     }
 
     let papers = null;
@@ -241,8 +263,7 @@
         if (conference_papers && journal_papers && preprint_papers) {
             const all_papers = [...conference_papers, ...journal_papers, ...preprint_papers];
             papers = sortPapers(all_papers);
-            filterPapers('all');
-            document.querySelector('.filter-buttons button').classList.add('active');
+            filterPapers('conference & journal');
         } else {
             console.error('Error: Data not loaded properly.');
         }
@@ -252,11 +273,12 @@
         await fetch_all_data();
         renderPage();
     }
-    main();
-
-    window.onload = function() {
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', main);
+    } else {
         main();
-    };
+    }
     
 </script>
 </body>
