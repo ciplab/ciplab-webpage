@@ -23,7 +23,7 @@
         "venue": "CVPRW",
         "year": 2025,
         "topic": ["_"],
-        "category": "conference",
+        "category": "workshop",
         "link": "#"
     },
     {
@@ -32,7 +32,7 @@
         "venue": "ICLRW",
         "year": 2025,
         "topic": ["_"],
-        "category": "conference",
+        "category": "workshop",
         "link": "#"
     },
     {
@@ -158,7 +158,7 @@
         "venue": "CVPRW",
         "year": 2024,
         "topic": ["_"],
-        "category": "conference",
+        "category": "workshop",
         "link": "https://arxiv.org/abs/2310.08929"
     },
     {
@@ -167,7 +167,7 @@
         "venue": "CVPRW",
         "year": 2024,
         "topic": ["_"],
-        "category": "conference",
+        "category": "workshop",
         "link": "https://arxiv.org/abs/2406.01079"
     },
     {
@@ -285,7 +285,7 @@
         "venue": "CVPRW",
         "year": 2022,
         "topic": ["_"],
-        "category": "conference",
+        "category": "workshop",
         "link": "https://openaccess.thecvf.com/content/CVPR2022W/ECV/html/Heo_Integrating_Pose_and_Mask_Predictions_for_Multi-Person_in_Videos_CVPRW_2022_paper.html"
     },
     {
@@ -294,7 +294,7 @@
         "venue": "WACV",
         "year": 2022,
         "topic": ["_"],
-        "category": "conference",
+        "category": "workshop",
         "link": "https://openaccess.thecvf.com/content/WACV2022/html/Hwang_Single-Shot_Path_Integrated_Panoptic_Segmentation_WACV_2022_paper.html"
     },
     {
@@ -357,7 +357,7 @@
         "venue": "CVPRW",
         "year": 2021,
         "topic": ["_"],
-        "category": "conference",
+        "category": "workshop",
         "link": "https://arxiv.org/abs/2106.11549"
     },
     {
@@ -366,7 +366,7 @@
         "venue": "CVPRW",
         "year": 2021,
         "topic": ["_"],
-        "category": "conference",
+        "category": "workshop",
         "link": "https://openaccess.thecvf.com/content/CVPR2021W/NTIRE/html/Jo_SRFlow-DA_Super-Resolution_Using_Normalizing_Flow_With_Deep_Convolutional_Block_CVPRW_2021_paper.html"
     },
     {
@@ -375,7 +375,7 @@
         "venue": "CVPRW",
         "year": 2021,
         "topic": ["_"],
-        "category": "conference",
+        "category": "workshop",
         "link": "https://openaccess.thecvf.com/content/CVPR2021W/ECV/html/Kim_Rethinking_the_Self-Attention_in_Vision_Transformers_CVPRW_2021_paper.html"
     },
     {
@@ -457,7 +457,7 @@
         "venue": "CVPRW",
         "year": 2020,
         "topic": ["_"],
-        "category": "conference",
+        "category": "workshop",
         "link": "https://openaccess.thecvf.com/content_CVPRW_2020/html/w31/Jo_Investigating_Loss_Functions_for_Extreme_Super-Resolution_CVPRW_2020_paper.html"
     },
     {
