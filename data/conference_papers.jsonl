@@ -1,5 +1,50 @@
 [
     {
+        "title": "CCMNet: Leveraging Calibrated Color Correction Matrices for Cross-Camera Color Constancy",
+        "authors": ["Dongyoung Kim", "Mahmoud Afifi", "Dongyun Kim", "Michael S. Brown", "Seon Joo Kim"],
+        "venue": "ICCV",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "https://www.dykim.me/projects/ccmnet"
+    },
+    {
+        "title": "Open-ended Hierarchical Streaming Video Understanding with Vision Language Models",
+        "authors": ["Hyolim Kang*", "Yunsu Park*", "Youngbeom Yoo", "Yeeun Choi", "Seon Joo Kim"],
+        "venue": "ICCV",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
+        "title": "Representing 3D Shapes With 64 Latent Vectors for 3D Diffusion Models",
+        "authors": ["In Cho", "Youngbeom Yoo", "Subin Jeon", "Seon Joo Kim"],
+        "venue": "ICCV",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "https://arxiv.org/abs/2503.08737"
+    },
+    {
+        "title": "ExploreGS: Explorable 3D Scene Reconstruction with Virtual Camera Samplings and Diffusion Priors",
+        "authors": ["Minsu Kim", "Subin Jeon", "In Cho", "Mijin Yoo", "Seon Joo Kim"],
+        "venue": "ICCV",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "https://github.com/minsu1206/ExploreGS"
+    },
+    {
+        "title": "Seam360GS: Seamless 360° Gaussian Splatting from Real-World Omnidirectional Images",
+        "authors": ["Changha Shin", "Woong Oh Cho", "Seon Joo Kim"],
+        "venue": "ICCV",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
         "title": "UniSkill: Imitating Human Videos via Cross-Embodiment Skill Representations",
         "authors": ["Hanjung Kim*", "Jaehyun Kang*", "Hyolim Kang", "Meedeum Cho", "Seon Joo Kim", "Youngwoon Lee"],
         "venue": "CVPRW",
