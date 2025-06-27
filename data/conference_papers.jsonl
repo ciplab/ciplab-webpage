@@ -1,4 +1,14 @@
 [
+
+    {
+        "title": "CRAIM: Caption-Based Autonomous Driving Scene Retrieval via Inclusive Text Matching",
+        "authors": ["Minjoo Ki", "Dae Jung Kim", "Kisung Kim", "Seon Joo Kim", "Jinhan Lee"],
+        "venue": "ICCV",
+        "year": 2025,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "#"
+    },
     {
         "title": "Training-Free Acceleration of Video LLMs via Multi-Granular Spatio-Temporal Token Merging",
         "authors": ["Jeongseok Hyun", "Sukjun Hwang", "Su Ho Han", "Taeoh Kim", "Inwoong Lee", "Dongyoon Wee", "Joon-Young Lee", "Seon Joo Kim", "Minho Shim"],
