@@ -3,7 +3,6 @@
     "id": "generative",
     "title": "Generative AI",
     "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/Generative_AI.gif",
-    "videoContainerStyle": "width: 257px; height: 257px; margin: 0px 0px;",
     "tasks": [
       "Understanding Diffusion models",
       "Conditional Video Generation (Portrait, Motion, etc.)",
