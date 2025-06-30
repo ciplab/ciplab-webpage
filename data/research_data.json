@@ -37,8 +37,8 @@
     ],
     "papers": [
       {
-        "title": "Multi-Granular Spatio-Temporal Token Merging for Training-Free Acceleration of Video LLMs",
-        "venue": "under review"
+        "title": "Training-Free Acceleration of Video LLMs via Multi-Granular Spatio-Temporal Token Merging",
+        "venue": "ICCV 2025"
       },
       {
         "title": "Imitating Human Videos via Cross-Embodiment Skill Representations",
@@ -73,6 +73,16 @@
     ],
     "papers": [
       {
+        "title": "ExploreGS: Explorable 3D Scene Reconstruction with Virtual Camera Samplings and Diffusion Priors",
+        "venue": "ICCV 2025",
+        "link": "https://github.com/minsu1206/ExploreGS"
+      },
+      {
+        "title": "Representing 3D Shapes With 64 Latent Vectors for 3D Diffusion Models",
+        "venue": "ICCV 2025",
+        "link": "https://arxiv.org/abs/2503.08737"
+      },
+      {
         "title": "Hierarchically Structured Neural Bones for Reconstructing Animatable Objects from Casual Videos",
         "venue": "ECCV 2024",
         "link": "https://sites.google.com/yonsei.ac.kr/subinjeon/projects/hsnb"
@@ -81,11 +91,6 @@
         "title": "Learning to Enhance Aperture Phasor Field for Non-Line-of-Sight Imaging",
         "venue": "ECCV 2024",
         "link": "https://join16.github.io/leap-page/"
-      },
-      {
-        "title": "EPINET: A Fully-Convolutional Neural Network Using Epipolar Geometry for Depth from Light Field Images",
-        "venue": "CVPR 2018",
-        "link": "https://arxiv.org/abs/1804.02379"
       }
     ]
   },
@@ -100,6 +105,11 @@
     ],
     "papers": [
       {
+        "title": "CCMNet: Leveraging Calibrated Color Correction Matrices for Cross-Camera Color Constancy",
+        "venue": "ICCV 2025",
+        "link": "https://www.dykim.me/projects/ccmnet"
+      },
+      {
         "title": "ATTIQA: Generalizable Image Quality Feature Extractor using Attribute-aware Pretraining",
         "venue": "ACCV 2025",
         "link": "https://arxiv.org/abs/2406.01020"
@@ -113,11 +123,6 @@
         "title": "Attentive Illumination Decomposition Model for Multi-Illuminant White Balance",
         "venue": "CVPR 2024",
         "link": "https://www.dykim.me/projects/aid"
-      },
-      {
-        "title": "Dense Interspecies Face Embedding",
-        "venue": "NeurIPS 2022",
-        "link": "https://proceedings.neurips.cc/paper_files/paper/2022/file/d71a4a6c796cacd9b8a298589943cdf3-Paper-Conference.pdf"
       }
     ]
   }
