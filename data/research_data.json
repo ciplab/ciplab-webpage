@@ -1,0 +1,124 @@
+[
+  {
+    "id": "generative",
+    "title": "Generative AI",
+    "videoUrl": "https://github.com/ciplab/ciplab-webpage/blob/main/data/assets/Generative_AI.mp4?raw=true",
+    "videoContainerStyle": "width: 257px; height: 257px; margin: 0px 79px;",
+    "tasks": [
+      "Understanding Diffusion models",
+      "Conditional Video Generation (Portrait, Motion, etc.)",
+      "Compositional Image Manipulation (Editing, Customization, etc.)",
+      "Evaluation Metrics for Diffusion models"
+    ],
+    "papers": [
+      {
+        "title": "IF-MDM: Implicit Face Motion Diffusion Model for High-Fidelity Realtime Talking Head Generation",
+        "venue": "under review"
+      },
+      {
+        "title": "Latent space Super-Resolution for Higher-Resolution Image Generation with Diffusion Models",
+        "venue": "CVPR 2025",
+        "link": "https://3587jjh.github.io/LSRNA/"
+      },
+      {
+        "title": "ORIDa: Object-centric Real-world Image Composition Dataset",
+        "venue": "CVPR 2025"
+      }
+    ]
+  },
+  {
+    "id": "video",
+    "title": "Video Understanding",
+    "videoUrl": "https://github.com/ciplab/ciplab-webpage/blob/main/data/assets/Video_Understanding.mp4?raw=true",
+    "tasks": [
+      "Streaming Video Understanding in Efficient Architecture (SSM, Efficient Transformer)",
+      "Video-Language Understanding",
+      "Vision for Robotics"
+    ],
+    "papers": [
+      {
+        "title": "Multi-Granular Spatio-Temporal Token Merging for Training-Free Acceleration of Video LLMs",
+        "venue": "under review"
+      },
+      {
+        "title": "Imitating Human Videos via Cross-Embodiment Skill Representations",
+        "venue": "under review"
+      },
+      {
+        "title": "Omni-RGPT: Unifying Image and Video Region-level Understanding via Token Marks",
+        "venue": "CVPR 2025",
+        "link": "https://arxiv.org/abs/2501.08326"
+      },
+      {
+        "title": "ActionSwitch: Class-agnostic Detection of Simultaneous Actions in Streaming Videos",
+        "venue": "ECCV 2024",
+        "link": "https://musicaloffering.github.io/ActionSwitch-release/"
+      },
+      {
+        "title": "Video Object Segmentation using Space-Time Memory Networks",
+        "venue": "ICCV 2019 (Oral)",
+        "link": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Oh_Video_Object_Segmentation_Using_Space-Time_Memory_Networks_ICCV_2019_paper.pdf"
+      }
+    ]
+  },
+  {
+    "id": "3d",
+    "title": "3D vision",
+    "videoUrl": "https://github.com/ciplab/ciplab-webpage/blob/main/data/assets/3D_Vision.png?raw=true",
+    "tasks": [
+      "Novel-View Synthesis (NeRF, Gaussian Splatting, etc.)",
+      "3D Representation Learning",
+      "Animatable 3D Model Reconstruction",
+      "Point Cloud Understanding"
+    ],
+    "papers": [
+      {
+        "title": "Hierarchically Structured Neural Bones for Reconstructing Animatable Objects from Casual Videos",
+        "venue": "ECCV 2024",
+        "link": "https://sites.google.com/yonsei.ac.kr/subinjeon/projects/hsnb"
+      },
+      {
+        "title": "Learning to Enhance Aperture Phasor Field for Non-Line-of-Sight Imaging",
+        "venue": "ECCV 2024",
+        "link": "https://join16.github.io/leap-page/"
+      },
+      {
+        "title": "EPINET: A Fully-Convolutional Neural Network Using Epipolar Geometry for Depth from Light Field Images",
+        "venue": "CVPR 2018",
+        "link": "https://arxiv.org/abs/1804.02379"
+      }
+    ]
+  },
+  {
+    "id": "lowlevel",
+    "title": "Low-level Vision & Computational Photography",
+    "videoUrl": "https://github.com/ciplab/ciplab-webpage/blob/main/data/assets/Low-level_Vision.jpg?raw=true",
+    "tasks": [
+      "Low-level vision : In-camera Pipeline, Auto White Balance, Super Resolution, etc.",
+      "Image Quality Assessment",
+      "Image / Video Manipulation"
+    ],
+    "papers": [
+      {
+        "title": "ATTIQA: Generalizable Image Quality Feature Extractor using Attribute-aware Pretraining",
+        "venue": "ACCV 2025",
+        "link": "https://arxiv.org/abs/2406.01020"
+      },
+      {
+        "title": "Accelerating Large Image Super-Resolution Networks with Pixel-Level Classification",
+        "venue": "ECCV 2024",
+        "link": "https://3587jjh.github.io/PCSR/"
+      },
+      {
+        "title": "Attentive Illumination Decomposition Model for Multi-Illuminant White Balance",
+        "venue": "CVPR 2024",
+        "link": "https://www.dykim.me/projects/aid"
+      },
+      {
+        "title": "Dense Interspecies Face Embedding",
+        "venue": "NeurIPS 2022",
+        "link": "https://proceedings.neurips.cc/paper_files/paper/2022/file/d71a4a6c796cacd9b8a298589943cdf3-Paper-Conference.pdf"
+      }
+    ]
+  }
+]
