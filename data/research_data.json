@@ -2,7 +2,7 @@
   {
     "id": "generative",
     "title": "Generative AI",
-    "videoUrl": "https://github.com/ciplab/ciplab-webpage/blob/main/data/assets/Generative_AI.mp4?raw=true",
+    "videoUrl": "https://github.com/ciplab/ciplab-webpage/blob/main/data/assets/Generative_AI.gif?raw=true",
     "videoContainerStyle": "width: 257px; height: 257px; margin: 0px 79px;",
     "tasks": [
       "Understanding Diffusion models",
@@ -29,7 +29,7 @@
   {
     "id": "video",
     "title": "Video Understanding",
-    "videoUrl": "https://github.com/ciplab/ciplab-webpage/blob/main/data/assets/Video_Understanding.mp4?raw=true",
+    "videoUrl": "https://github.com/ciplab/ciplab-webpage/blob/main/data/assets/Video_Understanding.gif?raw=true",
     "tasks": [
       "Streaming Video Understanding in Efficient Architecture (SSM, Efficient Transformer)",
       "Video-Language Understanding",
