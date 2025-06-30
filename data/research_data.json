@@ -2,7 +2,7 @@
   {
     "id": "generative",
     "title": "Generative AI",
-    "videoUrl": "https://github.com/ciplab/ciplab-webpage/blob/main/data/assets/Generative_AI.gif?raw=true",
+    "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/Generative_AI.gif",
     "videoContainerStyle": "width: 257px; height: 257px; margin: 0px 79px;",
     "tasks": [
       "Understanding Diffusion models",
@@ -29,7 +29,7 @@
   {
     "id": "video",
     "title": "Video Understanding",
-    "videoUrl": "https://github.com/ciplab/ciplab-webpage/blob/main/data/assets/Video_Understanding.gif?raw=true",
+    "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/Video_Understanding.gif",
     "tasks": [
       "Streaming Video Understanding in Efficient Architecture (SSM, Efficient Transformer)",
       "Video-Language Understanding",
@@ -64,7 +64,7 @@
   {
     "id": "3d",
     "title": "3D vision",
-    "videoUrl": "https://github.com/ciplab/ciplab-webpage/blob/main/data/assets/3D_Vision.png?raw=true",
+    "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/3D_Vision.png",
     "tasks": [
       "Novel-View Synthesis (NeRF, Gaussian Splatting, etc.)",
       "3D Representation Learning",
@@ -92,7 +92,7 @@
   {
     "id": "lowlevel",
     "title": "Low-level Vision & Computational Photography",
-    "videoUrl": "https://github.com/ciplab/ciplab-webpage/blob/main/data/assets/Low-level_Vision.jpg?raw=true",
+    "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/Low-level_Vision.jpg",
     "tasks": [
       "Low-level vision : In-camera Pipeline, Auto White Balance, Super Resolution, etc.",
       "Image Quality Assessment",
