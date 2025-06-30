@@ -17,7 +17,6 @@
     }
     .header {
       background-image: url('https://github.com/ciplab/ciplab-webpage/blob/main/data/assets/Research_Background.jpg?raw=true');
-      /* https://lh5.googleusercontent.com/ErFPRLmpuLIUkm6Eq5a-sNruIY7Vg7_PsmwQKjt4aDHbNUcu-_F26iCM9KqGyWxehaK-76oAbI5RW0igssWvvuDhbiK-1fNtcC5al8wSIhcnZEGigm9siRVg6DSB9E6N6w=w1280 */
       height: 30vh;
       display: flex;
       justify-content: center;
@@ -49,6 +48,7 @@
       margin: 20px auto;
       width: 95%;
       max-width: 1200px;
+      visibility: hidden; /* 로딩 전 깜빡임 방지를 위해 초기에 숨김 */
     }
     .section {
       display: flex;
@@ -94,8 +94,7 @@
       padding-left: 20px;
     }
     ul li {
-      margin-bottom: 5px; /* 각 항목 사이에 5px 간격 추가 */
-      /* 또는 필요 시, line-height: 1.5; 와 같이 조정 */
+      margin-bottom: 5px; /* 각 항목 사이에 5px 간격 추가 (기존 스타일 유지) */
     }
     /* 모바일 및 태블릿 환경: 레이아웃 및 패딩 조정 */
     @media (max-width: 768px) {
@@ -125,6 +124,7 @@
   <div class="header">
     <div class="header-text">Research</div>
   </div>
+  
   <div id="sections-container">
     <div class="section" id="section-generative">
       <div class="image-container" style="width: 257px; height: 257px; margin: 0px 79px 0px 79px;">
@@ -142,8 +142,7 @@
         <div class="list-title">[Selected Papers]</div>
         <ul>
           <li>IF-MDM: Implicit Face Motion Diffusion Model for High-Fidelity Realtime Talking Head Generation, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">under review</span></li>
-          <li>Latent space Super-Resolution for Higher-Resolution Image Generation with Diffusion Models, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">CVPR 2025</span>
-          <a href="https://3587jjh.github.io/LSRNA/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
+          <li>Latent space Super-Resolution for Higher-Resolution Image Generation with Diffusion Models, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">CVPR 2025 </span><a href="https://3587jjh.github.io/LSRNA/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
           <li>ORIDa: Object-centric Real-world Image Composition Dataset, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">CVPR 2025</span></li>
         </ul>
       </div>
@@ -163,14 +162,13 @@
         <div class="list-title">[Selected Papers]</div>
         <ul>
           <li>Multi-Granular Spatio-Temporal Token Merging for Training-Free Acceleration of Video LLMs, <span style="font-size: 12px; font-style: italic; color: #3d85c6;"> under review</span></li>
-          <li>UniSkill: Imitating Human Videos via Cross-Embodiment Skill Representations, <span style="font-size: 12px; font-style: italic; color: #3d85c6;"> under review</span>
-            <a href="https://kimhanjung.github.io/UniSkill/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
+          <li>Imitating Human Videos via Cross-Embodiment Skill Representations, <span style="font-size: 12px; font-style: italic; color: #3d85c6;"> under review</span></li>
           <li>Omni-RGPT: Unifying Image and Video Region-level Understanding via Token Marks, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">CVPR 2025</span>
             <a href="https://arxiv.org/abs/2501.08326" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
           <li>ActionSwitch: Class-agnostic Detection of Simultaneous Actions in Streaming Videos, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">ECCV 2024</span>
-                          <a href="https://musicaloffering.github.io/ActionSwitch-release/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
+                                  <a href="https://musicaloffering.github.io/ActionSwitch-release/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
           <li>Video Object Segmentation using Space-Time Memory Networks, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">ICCV 2019 (Oral)</span>
-                          <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Oh_Video_Object_Segmentation_Using_Space-Time_Memory_Networks_ICCV_2019_paper.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
+                                  <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Oh_Video_Object_Segmentation_Using_Space-Time_Memory_Networks_ICCV_2019_paper.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
         </ul>
       </div>
     </div>
@@ -190,11 +188,11 @@
         <div class="list-title">[Selected Papers]</div>
         <ul>
           <li>Hierarchically Structured Neural Bones for Reconstructing Animatable Objects from Casual Videos, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">ECCV 2024</span>
-                          <a href="https://sites.google.com/yonsei.ac.kr/subinjeon/projects/hsnb" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
+                                  <a href="https://sites.google.com/yonsei.ac.kr/subinjeon/projects/hsnb" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
           <li>Learning to Enhance Aperture Phasor Field for Non-Line-of-Sight Imaging, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">ECCV 2024</span>
-                          <a href="https://join16.github.io/leap-page/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
+                                  <a href="https://join16.github.io/leap-page/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
           <li>EPINET: A Fully-Convolutional Neural Network Using Epipolar Geometry for Depth from Light Field Images, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">CVPR 2018</span>
-                          <a href="https://arxiv.org/abs/1804.02379" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
+                                  <a href="https://arxiv.org/abs/1804.02379" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
         </ul>
       </div>
     </div>
@@ -213,25 +211,37 @@
         <div class="list-title">[Selected Papers]</div>
         <ul>
           <li>ATTIQA: Generalizable Image Quality Feature Extractor using Attribute-aware Pretraining, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">ACCV 2025</span>
-                          <a href="https://arxiv.org/abs/2406.01020" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
+                                  <a href="https://arxiv.org/abs/2406.01020" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
           <li>Accelerating Large Image Super-Resolution Networks with Pixel-Level Classification, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">ECCV 2024</span>
-                          <a href="https://3587jjh.github.io/PCSR/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>              
+                                  <a href="https://3587jjh.github.io/PCSR/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
           <li>Attentive Illumination Decomposition Model for Multi-Illuminant White Balance, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">CVPR 2024</span>
-                          <a href="https://www.dykim.me/projects/aid" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
+                                  <a href="https://www.dykim.me/projects/aid" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
           <li>Dense Interspecies Face Embedding, <span style="font-size: 12px; font-style: italic; color: #3d85c6;">NeurIPS 2022</span>
-                          <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/d71a4a6c796cacd9b8a298589943cdf3-Paper-Conference.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
+                                  <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/d71a4a6c796cacd9b8a298589943cdf3-Paper-Conference.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">🔗</a></li>
         </ul>
       </div>
     </div>
   </div>
+  
   <script>
+    // 이 스크립트는 DOM 요소들이 모두 로드된 직후,
+    // 그리고 페이지가 사용자에게 완전히 그려지기 전에 실행됩니다.
     function shuffleSections() {
       const container = document.getElementById('sections-container');
       const sections = Array.from(container.children);
+      
+      // 배열을 랜덤하게 섞습니다.
       sections.sort(() => Math.random() - 0.5);
+      
+      // 섞인 순서대로 다시 컨테이너에 추가합니다.
       sections.forEach(section => container.appendChild(section));
+      
+      // 순서 섞기가 끝난 후, 숨겨뒀던 컨테이너를 다시 보이게 합니다.
+      container.style.visibility = 'visible';
     }
-    window.onload = shuffleSections;
+
+    // 페이지가 준비되면 바로 함수를 실행합니다.
+    shuffleSections();
   </script>
 </body>
 </html>
