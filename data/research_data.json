@@ -123,6 +123,11 @@
         "title": "Attentive Illumination Decomposition Model for Multi-Illuminant White Balance",
         "venue": "CVPR 2024",
         "link": "https://www.dykim.me/projects/aid"
+      },
+      {
+        "title": "Dense Interspecies Face Embedding",
+        "venue": "NeurIPS 2022",
+        "link": "https://proceedings.neurips.cc/paper_files/paper/2022/file/d71a4a6c796cacd9b8a298589943cdf3-Paper-Conference.pdf"
       }
     ]
   }
