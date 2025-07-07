@@ -15,7 +15,7 @@
         }
         .header {
             background-image: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            height: 30vh;
+            height: 23vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -44,6 +44,7 @@
         .container {
             width: 95%; /* Default width for better mobile view */
             min-width: 320px;
+            max-width: 1200px;
             padding: 20px;
             box-sizing: border-box;
             transition: width 0.3s ease;
@@ -96,18 +97,154 @@
             margin-bottom: 80px; /* Reduced bottom margin */
         }
         .paper {
+            display: flex;
+            align-items: stretch; /* stretch children to equal height */
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             padding: 20px;
             margin-bottom: 10px;
             transition: box-shadow 0.3s;
+            gap: 8px;
         }
         .paper:hover {
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
         .paper:last-child {
             margin-bottom: 20px; /* Adjusted for consistency */
+        }
+        .thumbnail {
+            width: clamp(120px, 18%, 230px); /* responsive width */
+            height: auto;                    /* scale height with width preserving ratio */
+            max-height: 160px;               /* prevent overly tall thumbnails */
+            object-fit: contain;             /* show entire image without cropping */
+            flex-shrink: 0;
+            align-self: center;              /* vertically center within paper box */
+            cursor: pointer;
+        }
+
+        .paper-details {
+            flex: 1;
+            margin-left: 15px;
+            display: block; /* ensure anchor fills available width */
+            /* color inherited from parent */
+        }
+
+        .keywords {
+            margin-top: 6px;
+            font-size: 0.85em;
+            color: #555;
+        }
+
+        .venue-chip {
+            display: inline-block;
+            background: #1c4587;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 8px;
+            padding: 2px 14px 2px 14px;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+        .paper-title {
+            font-size: 1.08em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .author-list {
+            font-size: 0.9em;
+            color: #222;
+            margin-bottom: 5px;
+        }
+        .keywords {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .keyword-chip {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #888;
+            border-radius: 12px;
+            padding: 2px 10px;
+            font-size: 0.92em;
+            margin-right: 5px;
+            margin-bottom: 2px;
+        }
+        .paper-details > div:not(:last-child) {
+            margin-bottom: 7px;
+        }
+
+        /* Mobile layout: stack thumbnail on top */
+        @media (max-width: 600px) {
+            .paper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .thumbnail {
+                width: 80%;
+                max-width: 260px;
+                margin-bottom: 10px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .paper-details {
+                margin-left: 0;
+                text-align: left;
+            }
+        }
+
+        /* Desktop: thumbnail/info ratio, gap, hover effect */
+        @media (min-width: 601px) {
+            .paper {
+                gap: 1px;
+                align-items: center;
+            }
+            .thumbnail {
+                flex-basis: 32%;
+                min-width: 150px;
+                max-width: 240px;
+                width: 32%;
+                height: auto;
+                /* box-shadow removed for flat look */
+            }
+            .paper-details {
+                flex-basis: 68%;
+                min-width: 0;
+            }
+        }
+
+        /* Overlay modal for thumbnail preview */
+        .thumbnail-overlay-bg {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.9);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.18s;
+        }
+        .thumbnail-overlay-bg.active {
+            display: flex;
+        }
+        .thumbnail-overlay-img {
+            width: 75vw;
+            max-width: 900px;
+            max-height: 90vh;
+            object-fit: contain;
+            background: #222;
+            border-radius: 8px;
+        }
+        @media (max-width: 800px) {
+            .thumbnail-overlay-img {
+                width: 95vw;
+                max-width: 98vw;
+            }
         }
     </style>
 </head>
@@ -116,7 +253,7 @@
         <div class="header-text">Publications</div>
     </div>
     <div class="container">
-        <div class="instruction-text">&nbsp&nbsp*Clicking each box will take you to the corresponding paper or project page.</div>
+        <div class="instruction-text">&nbsp;&nbsp;*Click the paper title to visit the arXiv or project page, or click the thumbnail to view a larger image.</div>
         <div class="filter-buttons">
             <button class="button" onclick="filterPapers('conference & journal')">Conference & Journal</button>
             <button class="button" onclick="filterPapers('workshop')">Workshop</button>
@@ -124,6 +261,10 @@
         </div>
         <div id="paper-list" class="paper-list">
             </div>
+    </div>
+    <!-- Overlay for thumbnail preview -->
+    <div id="thumbnail-overlay" class="thumbnail-overlay-bg" tabindex="-1">
+        <img id="thumbnail-overlay-img" class="thumbnail-overlay-img" src="" alt="thumbnail preview" />
     </div>
 <script>
     async function fetch_data(tgt_url) {
@@ -140,6 +281,7 @@
         }
     }
 
+    // Load JSON files from the local site so recent edits are reflected without waiting for GitHub sync
     const conference_url = "https://raw.githubusercontent.com/ciplab/publication/main/data/conference_papers.jsonl";
     const journal_url = "https://raw.githubusercontent.com/ciplab/publication/main/data/journal_papers.jsonl";
     const preprint_url = "https://raw.githubusercontent.com/ciplab/publication/main/data/preprint_papers.jsonl";
@@ -230,29 +372,44 @@
         } else if (filteredPapers.length > 0) {
             filteredPapers.forEach(paper => {
                 const paperItem = document.createElement('div');
-                let reward = "";
-                if (paper.hasOwnProperty('reward')) {
-                  reward = ` <b>(${paper.reward})</b>`;
-                }
                 paperItem.className = 'paper';
 
-                if (paper.link === "#"){
-                    paperItem.innerHTML = `<div><strong>${paper.title}</strong></div>
-                                           <div>
-                                           <span style="color: #3d85c6; font-style: italic;">
-                                               ${paper.venue} ${paper.year}${reward}
-                                           </span> - ${paper.authors.join(", ")}
-                                           </div>`;
-                } else{
-                    paperItem.innerHTML = `<a href=${paper.link} style="text-decoration: none; color: inherit;">
-                                        <div><strong>${paper.title}</strong></div>
-                                        <div>
-                                            <span style="color: #3d85c6; font-style: italic;">
-                                                ${paper.venue} ${paper.year}${reward}
-                                            </span> - ${paper.authors.join(", ")}
-                                        </div>
-                                        </a>`;
+                // Reward text (e.g., Oral, Spotlight)
+                const reward = paper.hasOwnProperty('reward') ? ` <b>(${paper.reward})</b>` : "";
+
+                // Thumbnail handling
+                let thumbnailHTML = "";
+                if (paper.hasOwnProperty('thumbnail') && paper.thumbnail && paper.thumbnail !== "#") {
+                    // Add data-fullsrc for modal
+                    thumbnailHTML = `<img src="${paper.thumbnail}" alt="thumbnail" class="thumbnail" data-fullsrc="${paper.thumbnail}">`;
                 }
+
+                // Venue chip
+                const venueChipHTML = `<div class="venue-chip">${paper.venue} ${paper.year}${reward}</div>`;
+                // Title
+                const titleHTML = `<div class="paper-title">${paper.title}</div>`;
+                // Authors
+                const authorsHTML = `<div class="author-list">${paper.authors.join(", ")}</div>`;
+                // Keywords (as chips)
+                let keywordsHTML = "";
+                if (Array.isArray(paper.topic)) {
+                    const validTopics = paper.topic
+                        .map(t => typeof t === 'string' ? t.trim() : t)
+                        .filter(t => t && t !== "_" && t !== "-");
+                    if (validTopics.length > 0) {
+                        const tags = validTopics.map(t => `<span class='keyword-chip'>#${t}</span>`).join(' ');
+                        keywordsHTML = `<div class="keywords">${tags}</div>`;
+                    }
+                }
+                // Compose details
+                const detailInnerHTML = `${venueChipHTML}${titleHTML}${authorsHTML}${keywordsHTML}`;
+
+                // Wrap details with link if available
+                const detailsHTML = (paper.link && paper.link !== "#") ?
+                    `<a href="${paper.link}" style="text-decoration: none; color: inherit;" class="paper-details">${detailInnerHTML}</a>` :
+                    `<div class="paper-details">${detailInnerHTML}</div>`;
+
+                paperItem.innerHTML = `${thumbnailHTML}${detailsHTML}`;
                 paperList.appendChild(paperItem);
             });
         }
@@ -280,6 +437,28 @@
         main();
     }
     
+    // Modal logic for thumbnail preview
+    document.addEventListener('DOMContentLoaded', function() {
+        const overlay = document.getElementById('thumbnail-overlay');
+        const overlayImg = document.getElementById('thumbnail-overlay-img');
+        document.body.addEventListener('click', function(e) {
+            if (e.target.classList.contains('thumbnail')) {
+                overlayImg.src = e.target.getAttribute('data-fullsrc');
+                overlay.classList.add('active');
+                overlay.focus();
+            } else if (e.target === overlay) {
+                overlay.classList.remove('active');
+                overlayImg.src = '';
+            }
+        });
+        // ESC key closes overlay
+        overlay.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                overlay.classList.remove('active');
+                overlayImg.src = '';
+            }
+        });
+    });
 </script>
 </body>
 </html>
