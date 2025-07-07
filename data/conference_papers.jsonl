@@ -177,7 +177,7 @@
         "authors": ["Hanjung Kim", "Jaehyun Kang", "Miran Heo", "Sukjun Hwang", "Seoung Wug Oh", "Seon Joo Kim"],
         "venue": "ECCV",
         "year": 2024,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2024_visage.png",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2024_visage.jpg",
         "topic": ["Video Instance Segmentation", "Appearance-aware Tracking", "Online Tracking"],
         "category": "conference",
         "link": "https://kimhanjung.github.io/VISAGE/"
