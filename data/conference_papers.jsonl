@@ -23,7 +23,8 @@
         "authors": ["Dongyoung Kim", "Mahmoud Afifi", "Dongyun Kim", "Michael S. Brown", "Seon Joo Kim"],
         "venue": "ICCV",
         "year": 2025,
-        "topic": ["_"],
+        "thumbnail": "https://lh4.googleusercontent.com/NAQ340mAfN67zPP2T1xZdHJdmWvBRjDUNG5sWSMRkAKXboysCsxDW04-ua738VubWRGupqRJ7WoaM703J83cy3WvTIJcGW0OZVI1jAlkzzZ5W6wbdQQPXyC_rJddW3i9NT3YKi-DOvm7JWS-BtVlsCiJi1EFdB_hnIVDn7jeOkG1__k1yaVeww",
+        "topic": ["Computational Photography", "Camera ISP", "Color Constancy"],
         "category": "conference",
         "link": "https://www.dykim.me/projects/ccmnet"
     },
