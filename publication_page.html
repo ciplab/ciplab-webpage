@@ -362,7 +362,11 @@
             const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
             
             const jokeItem = document.createElement('div');
-            jokeItem.className = 'paper'; 
+            jokeItem.className = 'paper';
+            jokeItem.style.display = 'flex';
+            jokeItem.style.justifyContent = 'center';
+            jokeItem.style.alignItems = 'center';
+            jokeItem.style.flexDirection = 'column';
             jokeItem.style.textAlign = 'center';
             jokeItem.style.fontStyle = 'italic';
             jokeItem.style.color = '#666';

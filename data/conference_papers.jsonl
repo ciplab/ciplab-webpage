@@ -75,7 +75,8 @@
         "authors": ["Hanjung Kim*", "Jaehyun Kang*", "Hyolim Kang", "Meedeum Cho", "Seon Joo Kim", "Youngwoon Lee"],
         "venue": "CVPRW",
         "year": 2025,
-        "topic": ["_"],
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025_uniskill.jpg",
+        "topic": ["Robot Learning", "Learning from Human Videos", "Skill Representation"],
         "category": "workshop",
         "link": "https://kimhanjung.github.io/UniSkill/"
     },
@@ -176,7 +177,8 @@
         "authors": ["Hanjung Kim", "Jaehyun Kang", "Miran Heo", "Sukjun Hwang", "Seoung Wug Oh", "Seon Joo Kim"],
         "venue": "ECCV",
         "year": 2024,
-        "topic": ["_"],
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2024_visage.png",
+        "topic": ["Video Instance Segmentation", "Appearance-aware Tracking", "Online Tracking"],
         "category": "conference",
         "link": "https://kimhanjung.github.io/VISAGE/"
     },
