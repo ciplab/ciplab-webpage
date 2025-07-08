@@ -161,7 +161,8 @@
         "authors": ["Daekyu Kwon", "Dongyoung Kim", "Sehwan Ki", "Younghyun Jo", "Hyong-Euk Lee", "Seon Joo Kim"],
         "venue": "ACCV",
         "year": 2024,
-        "topic": ["_"],
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2024/attiqa.jpg",
+        "topic": ["Image Quality Assessment", "Attribute-Aware"],
         "category": "conference",
         "link": "https://arxiv.org/abs/2406.01020"
     },
