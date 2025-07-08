@@ -142,9 +142,10 @@
         "authors": ["Miran Heo", "Seoung Wug Oh", "Seon Joo Kim", "Joon-Young Lee"],
         "venue": "AAAI",
         "year": 2025,
-        "topic": ["_"],
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/rocovis.jpg",
+        "topic": ["Video Instance Segmentation", "Instance Mask Propagation"],
         "category": "conference",
-        "link": "#"
+        "link": "https://ojs.aaai.org/index.php/AAAI/article/view/32361"
     },
     {
         "title": "Exploring Scalability of Self-Training for Open-Vocabulary Temporal Action Localization",
