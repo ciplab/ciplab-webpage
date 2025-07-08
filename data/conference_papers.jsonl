@@ -5,7 +5,7 @@
         "authors": ["Minjoo Ki", "Dae Jung Kim", "Kisung Kim", "Seon Joo Kim", "Jinhan Lee"],
         "venue": "ICCV",
         "year": 2025,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025_craim.png",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/craim.png",
         "topic": ["_"],
         "category": "conference",
         "link": "#"
@@ -15,7 +15,7 @@
         "authors": ["Jeongseok Hyun", "Sukjun Hwang", "Su Ho Han", "Taeoh Kim", "Inwoong Lee", "Dongyoon Wee", "Joon-Young Lee", "Seon Joo Kim", "Minho Shim"],
         "venue": "ICCV",
         "year": 2025,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025_trainingfree.png",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/trainingfree.png",
         "topic": ["Video LLM", "Token Reduction", "Training-Free"],
         "category": "conference",
         "link": "#"
@@ -25,7 +25,7 @@
         "authors": ["Dongyoung Kim", "Mahmoud Afifi", "Dongyun Kim", "Michael S. Brown", "Seon Joo Kim"],
         "venue": "ICCV",
         "year": 2025,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025_ccmnet.png",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/ccmnet.png",
         "topic": ["Computational Photography", "Camera ISP", "Color Constancy"],
         "category": "conference",
         "link": "https://www.dykim.me/projects/ccmnet"
@@ -35,7 +35,7 @@
         "authors": ["Hyolim Kang*", "Yunsu Park*", "Youngbeom Yoo", "Yeeun Choi", "Seon Joo Kim"],
         "venue": "ICCV",
         "year": 2025,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025_open-ended.png",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/open-ended.png",
         "topic": ["_"],
         "category": "conference",
         "link": "#"
@@ -44,7 +44,7 @@
         "title": "Representing 3D Shapes With 64 Latent Vectors for 3D Diffusion Models",
         "authors": ["In Cho", "Youngbeom Yoo", "Subin Jeon", "Seon Joo Kim"],
         "venue": "ICCV",
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025_rep64.png",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/rep64.png",
         "year": 2025,
         "topic": ["_"],
         "category": "conference",
@@ -55,7 +55,7 @@
         "authors": ["Minsu Kim", "Subin Jeon", "In Cho", "Mijin Yoo", "Seon Joo Kim"],
         "venue": "ICCV",
         "year": 2025,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025_exploregs.png",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/exploregs.png",
         "topic": ["_"],
         "category": "conference",
         "link": "https://github.com/minsu1206/ExploreGS"
@@ -65,7 +65,7 @@
         "authors": ["Changha Shin", "Woong Oh Cho", "Seon Joo Kim"],
         "venue": "ICCV",
         "year": 2025,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025_seam360gs.png",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/seam360gs.png",
         "topic": ["_"],
         "category": "conference",
         "link": "#"
@@ -75,7 +75,7 @@
         "authors": ["Hanjung Kim*", "Jaehyun Kang*", "Hyolim Kang", "Meedeum Cho", "Seon Joo Kim", "Youngwoon Lee"],
         "venue": "CVPRW",
         "year": 2025,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025_uniskill.jpg",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/uniskill.jpg",
         "topic": ["Robot Learning", "Learning from Human Videos", "Skill Representation"],
         "category": "workshop",
         "link": "https://kimhanjung.github.io/UniSkill/"
@@ -112,7 +112,7 @@
         "authors": ["Miran Heo", "Min-Hung Chen", "De-An Huang", "Sifei Liu", "Subhashree Radhakrishnan", "Seon Joo Kim", "Yu-Chiang Frank Wang", "Ryo Hachiuma"],
         "venue": "CVPR",
         "year": 2025,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025_omnirgpt.png",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/omnirgpt.png",
         "topic": ["_"],
         "category": "conference",
         "link": "https://miranheo.github.io/omni-rgpt/"
@@ -122,7 +122,7 @@
         "authors": ["Jinwoo Kim", "Sangmin Han", "Jinho Jeong", "Jiwoo Choi", "Dongyoung Kim", "Seon Joo Kim"],
         "venue": "CVPR",
         "year": 2025,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025_orida.png",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/orida.png",
         "topic": ["_"],
         "category": "conference",
         "link": "#"
@@ -132,7 +132,8 @@
         "authors": ["Jinho Jeong", "Sangmin Han", "Jinwoo Kim", "Seon Joo Kim"],
         "venue": "CVPR",
         "year": 2025,
-        "topic": ["_"],
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/lsrna.jpg",
+        "topic": ["Super-Resolution", "Diffusion Model"],
         "category": "conference",
         "link": "https://arxiv.org/abs/2503.18446"
     },
@@ -150,7 +151,8 @@
         "authors": ["Jeongseok Hyun", "Su Ho Han", "Hyolim Kang", "Joon-Young Lee", "Seon Joo Kim"],
         "venue": "WACV",
         "year": 2025,
-        "topic": ["Video Vision"],
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/ovtal.jpg",
+        "topic": ["Video Vision", "Self-Training", "Open-Vocabulary"],
         "category": "conference",
         "link": "https://arxiv.org/abs/2407.07024"
     },
@@ -177,7 +179,7 @@
         "authors": ["Hanjung Kim", "Jaehyun Kang", "Miran Heo", "Sukjun Hwang", "Seoung Wug Oh", "Seon Joo Kim"],
         "venue": "ECCV",
         "year": 2024,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2024_visage.jpg",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2024/visage.jpg",
         "topic": ["Video Instance Segmentation", "Appearance-aware Tracking", "Online Tracking"],
         "category": "conference",
         "link": "https://kimhanjung.github.io/VISAGE/"
