@@ -441,8 +441,7 @@
             const reward = paper.hasOwnProperty('reward') ? ` <b>(${paper.reward})</b>` : "";
             let thumbnailHTML = "";
             if (paper.hasOwnProperty('thumbnail') && paper.thumbnail && paper.thumbnail !== "#") {
-                // PLAN 1: Add loading="lazy" for better performance.
-                thumbnailHTML = `<img src="${paper.thumbnail}" alt="thumbnail" class="thumbnail" data-fullsrc="${paper.thumbnail}" loading="lazy">`;
+                thumbnailHTML = `<img src="${paper.thumbnail}" alt="thumbnail" class="thumbnail" data-fullsrc="${paper.thumbnail}" loading="auto">`;
             }
             const venueChipHTML = `<div class="venue-chip">${paper.venue} ${paper.year}${reward}</div>`;
             const titleHTML = `<div class="paper-title">${paper.title}</div>`;
