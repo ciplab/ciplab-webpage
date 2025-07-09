@@ -96,6 +96,13 @@
         .paper-list {
             margin-bottom: 80px; /* Reduced bottom margin */
         }
+        .loader {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.1em;
+            color: #555;
+            font-style: italic;
+        }
         .paper {
             display: flex;
             align-items: stretch; /* stretch children to equal height */
@@ -247,6 +254,37 @@
             }
         }
 
+        /* 최상단 이동 버튼 */
+        #scroll-to-top-btn {
+            position: fixed;
+            right: 28px;
+            bottom: 126px; /* 썸네일 버튼(58px) + 높이(58px) + 간격(10px) */
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            display: none; /* 기본적으로 숨김 */
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 9998; /* 썸네일 버튼보다 아래에 있도록 설정 */
+            border: none;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        #scroll-to-top-btn:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+            background: #f0f4fa;
+        }
+        #scroll-to-top-btn.visible {
+            display: flex;
+        }
+        #scroll-to-top-btn svg {
+            width: 32px;
+            height: 32px;
+            display: block;
+        }
+
         /* 썸네일 토글 버튼 (우하단 고정) */
         .thumbnail-toggle-btn {
             position: fixed;
@@ -279,6 +317,16 @@
             display: none !important;
         }
         @media (max-width: 600px) {
+            #scroll-to-top-btn {
+                right: 14px;
+                bottom: 122px; /* 64px + 48px + 10px */
+                width: 48px;
+                height: 48px;
+            }
+            #scroll-to-top-btn svg {
+                width: 26px;
+                height: 26px;
+            }
             .thumbnail-toggle-btn {
                 right: 14px;
                 bottom: 64px;
@@ -305,11 +353,18 @@
         </div>
         <div id="paper-list" class="paper-list">
             </div>
+        <div id="loader" class="loader" style="display: none;">Loading more papers...</div>
     </div>
     <!-- Overlay for thumbnail preview -->
     <div id="thumbnail-overlay" class="thumbnail-overlay-bg" tabindex="-1">
         <img id="thumbnail-overlay-img" class="thumbnail-overlay-img" src="" alt="thumbnail preview" />
     </div>
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top-btn" aria-label="Scroll to top" title="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1c4587" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
     <!-- 썸네일 토글 버튼 -->
     <button class="thumbnail-toggle-btn" id="thumbnail-toggle-btn" aria-label="Toggle thumbnails" title="Toggle thumbnails">
         <!-- 기본: 눈(eye) 아이콘 -->
@@ -339,6 +394,12 @@
     let conference_papers = null;
     let journal_papers = null;
     let preprint_papers = null;
+
+    let papers = null; // all papers from json
+    let currentFilteredPapers = []; // papers for the current filter
+    const papersPerLoad = 15; // Number of papers to load at a time
+    let nextPaperIndex = 0; // Index for the next batch
+    let isLoading = false; // Flag to prevent multiple simultaneous loads
 
     async function fetch_all_data() {
         const conference_promise = fetch_data(conference_url);
@@ -372,10 +433,60 @@
         });
     }
 
+    function appendPapers(papersToAppend) {
+        const paperList = document.getElementById('paper-list');
+        papersToAppend.forEach(paper => {
+            const paperItem = document.createElement('div');
+            paperItem.className = 'paper';
+            const reward = paper.hasOwnProperty('reward') ? ` <b>(${paper.reward})</b>` : "";
+            let thumbnailHTML = "";
+            if (paper.hasOwnProperty('thumbnail') && paper.thumbnail && paper.thumbnail !== "#") {
+                // PLAN 1: Add loading="lazy" for better performance.
+                thumbnailHTML = `<img src="${paper.thumbnail}" alt="thumbnail" class="thumbnail" data-fullsrc="${paper.thumbnail}" loading="lazy">`;
+            }
+            const venueChipHTML = `<div class="venue-chip">${paper.venue} ${paper.year}${reward}</div>`;
+            const titleHTML = `<div class="paper-title">${paper.title}</div>`;
+            const authorsHTML = `<div class="author-list">${paper.authors.join(", ")}</div>`;
+            let keywordsHTML = "";
+            if (Array.isArray(paper.topic)) {
+                const validTopics = paper.topic
+                    .map(t => typeof t === 'string' ? t.trim() : t)
+                    .filter(t => t && t !== "_" && t !== "-");
+                if (validTopics.length > 0) {
+                    const tags = validTopics.map(t => `<span class='keyword-chip'>#${t}</span>`).join(' ');
+                    keywordsHTML = `<div class="keywords">${tags}</div>`;
+                }
+            }
+            const detailInnerHTML = `${venueChipHTML}${titleHTML}${authorsHTML}${keywordsHTML}`;
+            const detailsHTML = (paper.link && paper.link !== "#") ?
+                `<a href="${paper.link}" style="text-decoration: none; color: inherit;" class="paper-details">${detailInnerHTML}</a>` :
+                `<div class="paper-details">${detailInnerHTML}</div>`;
+            paperItem.innerHTML = `${thumbnailHTML}${detailsHTML}`;
+            paperList.appendChild(paperItem);
+        });
+    }
+
+    function loadMorePapers() {
+        if (isLoading || nextPaperIndex >= currentFilteredPapers.length) {
+            return; // Don't load if already loading or no more papers
+        }
+        isLoading = true;
+        const loader = document.getElementById('loader');
+        loader.style.display = 'block';
+
+        const papersToLoad = currentFilteredPapers.slice(nextPaperIndex, nextPaperIndex + papersPerLoad);
+        nextPaperIndex += papersPerLoad;
+        
+        appendPapers(papersToLoad);
+        loader.style.display = 'none';
+        isLoading = false;
+    }
+
     function filterPapers(category) {
         const buttons = document.querySelectorAll('.filter-buttons .button');
         buttons.forEach(button => {
-            if (button.textContent.toLowerCase() === category.toLowerCase()) {
+            // Match 'conference & journal' with the first word
+            if (button.textContent.toLowerCase().includes(category.toLowerCase().split(' ')[0])) {
                 button.classList.add('active');
             } else {
                 button.classList.remove('active');
@@ -383,25 +494,23 @@
         });
 
         const paperList = document.getElementById('paper-list');
-        paperList.innerHTML = '';
+        paperList.innerHTML = ''; // Clear previous papers
         
-        let filteredPapers;
         switch(category) {
             case 'conference & journal':
-                filteredPapers = papers.filter(paper => paper.category === 'conference' || paper.category === 'journal');
+                currentFilteredPapers = papers.filter(paper => paper.category === 'conference' || paper.category === 'journal');
                 break;
             case 'workshop':
-                filteredPapers = papers.filter(paper => paper.category === 'workshop');
+                currentFilteredPapers = papers.filter(paper => paper.category === 'workshop');
                 break;
             case 'preprint':
-                filteredPapers = papers.filter(paper => paper.category === 'preprint');
+                currentFilteredPapers = papers.filter(paper => paper.category === 'preprint');
                 break;
             default:
-                filteredPapers = papers;
+                currentFilteredPapers = papers;
         }
 
-        if (category === 'preprint' && filteredPapers.length === 0) {
-            // *** START: REVISED JOKES SECTION ***
+        if (category === 'preprint' && currentFilteredPapers.length === 0) {
             const jokes = [
                 "All our preprints have graduated! You can find them in the 'Conference & Journal' sections. 🎓🎉",
                 "Achievement Unlocked: All Clear! Every pending paper has been peer-reviewed and published. 🏆",
@@ -409,68 +518,21 @@
                 "Good news travels fast! Our preprints were accepted so quickly, we didn't have time to list them here. 🚀",
                 "The nest is empty! Our preprints have all found prestigious homes in top-tier venues. Check them out there! 🕊️"
             ];
-            // *** END: REVISED JOKES SECTION ***
             const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
             
             const jokeItem = document.createElement('div');
             jokeItem.className = 'paper';
-            jokeItem.style.display = 'flex';
-            jokeItem.style.justifyContent = 'center';
-            jokeItem.style.alignItems = 'center';
-            jokeItem.style.flexDirection = 'column';
-            jokeItem.style.textAlign = 'center';
-            jokeItem.style.fontStyle = 'italic';
-            jokeItem.style.color = '#666';
+            jokeItem.style.cssText = 'display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; font-style: italic; color: #666;';
             jokeItem.innerHTML = `<p style="font-size: 1.1em; margin: 0;">${randomJoke}</p>`;
             paperList.appendChild(jokeItem);
-
-        } else if (filteredPapers.length > 0) {
-            filteredPapers.forEach(paper => {
-                const paperItem = document.createElement('div');
-                paperItem.className = 'paper';
-
-                // Reward text (e.g., Oral, Spotlight)
-                const reward = paper.hasOwnProperty('reward') ? ` <b>(${paper.reward})</b>` : "";
-
-                // Thumbnail handling
-                let thumbnailHTML = "";
-                if (paper.hasOwnProperty('thumbnail') && paper.thumbnail && paper.thumbnail !== "#") {
-                    // Add data-fullsrc for modal
-                    thumbnailHTML = `<img src="${paper.thumbnail}" alt="thumbnail" class="thumbnail" data-fullsrc="${paper.thumbnail}">`;
-                }
-
-                // Venue chip
-                const venueChipHTML = `<div class="venue-chip">${paper.venue} ${paper.year}${reward}</div>`;
-                // Title
-                const titleHTML = `<div class="paper-title">${paper.title}</div>`;
-                // Authors
-                const authorsHTML = `<div class="author-list">${paper.authors.join(", ")}</div>`;
-                // Keywords (as chips)
-                let keywordsHTML = "";
-                if (Array.isArray(paper.topic)) {
-                    const validTopics = paper.topic
-                        .map(t => typeof t === 'string' ? t.trim() : t)
-                        .filter(t => t && t !== "_" && t !== "-");
-                    if (validTopics.length > 0) {
-                        const tags = validTopics.map(t => `<span class='keyword-chip'>#${t}</span>`).join(' ');
-                        keywordsHTML = `<div class="keywords">${tags}</div>`;
-                    }
-                }
-                // Compose details
-                const detailInnerHTML = `${venueChipHTML}${titleHTML}${authorsHTML}${keywordsHTML}`;
-
-                // Wrap details with link if available
-                const detailsHTML = (paper.link && paper.link !== "#") ?
-                    `<a href="${paper.link}" style="text-decoration: none; color: inherit;" class="paper-details">${detailInnerHTML}</a>` :
-                    `<div class="paper-details">${detailInnerHTML}</div>`;
-
-                paperItem.innerHTML = `${thumbnailHTML}${detailsHTML}`;
-                paperList.appendChild(paperItem);
-            });
+            document.getElementById('loader').style.display = 'none';
+            nextPaperIndex = 0;
+        } else {
+            nextPaperIndex = 0; // Reset for new filter
+            loadMorePapers(); // Load first batch of papers
         }
     }
 
-    let papers = null;
     function renderPage(){
         if (conference_papers && journal_papers && preprint_papers) {
             const all_papers = [...conference_papers, ...journal_papers, ...preprint_papers];
@@ -492,6 +554,14 @@
         main();
     }
     
+    // Scroll listener for infinite loading
+    window.addEventListener('scroll', () => {
+        // Load more when user is a bit before the bottom of the document
+        if (!isLoading && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+            loadMorePapers();
+        }
+    });
+
     // Modal logic for thumbnail preview
     document.addEventListener('DOMContentLoaded', function() {
         const overlay = document.getElementById('thumbnail-overlay');
@@ -517,64 +587,84 @@
 
     // 썸네일 전체 토글 및 버튼 위치 관리
     (function(){
-        const btn = document.getElementById('thumbnail-toggle-btn');
-        if (!btn) return; // 버튼이 없으면 아무것도 안 함
-        const iconSpan = document.getElementById('thumbnail-toggle-icon');
+        const thumbnailBtn = document.getElementById('thumbnail-toggle-btn');
+        const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
         const container = document.querySelector('.container');
-        
+
+        if (!thumbnailBtn || !container) return; // Essential elements must exist
+
+        // --- Button Position Logic ---
+        function updateButtonPositions() {
+            const containerRect = container.getBoundingClientRect();
+            const viewportWidth = window.innerWidth;
+            const btnWidth = thumbnailBtn.offsetWidth; // Assuming both buttons have same width
+            const margin = 20;
+            const desiredLeft = containerRect.right + margin;
+
+            const buttons = [thumbnailBtn, scrollToTopBtn];
+
+            if (desiredLeft + btnWidth < viewportWidth) {
+                // Position next to the content box
+                buttons.forEach(btn => {
+                    if (btn) {
+                        btn.style.left = `${desiredLeft}px`;
+                        btn.style.right = 'auto';
+                    }
+                });
+            } else {
+                // Revert to fixed position on the right edge of viewport
+                buttons.forEach(btn => {
+                    if (btn) {
+                        btn.style.left = 'auto';
+                        btn.style.right = ''; // Reset inline style to use CSS `right` property
+                    }
+                });
+            }
+        }
+
+        // --- Thumbnail Toggle Button Logic ---
+        const iconSpan = document.getElementById('thumbnail-toggle-icon');
         const eyeSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="#1c4587" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="9" ry="5.5"/><circle cx="12" cy="12" r="2.5"/></svg>';
         const eyeOffSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="#1c4587" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="9" ry="5.5"/><circle cx="12" cy="12" r="2.5"/><line x1="3" y1="21" x2="21" y2="3"/></svg>';
         
-        // 버튼 위치 동적 조정
-        function updateButtonPosition() {
-            if (!container) return;
-            const containerRect = container.getBoundingClientRect();
-            const viewportWidth = window.innerWidth;
-            const btnWidth = btn.offsetWidth;
-            const margin = 20; // 콘텐츠와 버튼 사이의 여백
-
-            const desiredLeft = containerRect.right + margin;
-
-            // 화면 오른쪽에 버튼을 놓을 공간이 있는지 확인
-            if (desiredLeft + btnWidth < viewportWidth) {
-                // 공간이 있으면 콘텐츠 오른쪽에 배치
-                btn.style.left = `${desiredLeft}px`;
-                btn.style.right = 'auto';
-            } else {
-                // 공간이 없으면 CSS에 정의된 대로 화면 우하단에 고정
-                btn.style.left = 'auto';
-                btn.style.right = ''; // 인라인 스타일 제거하여 CSS 규칙 적용
-            }
-        }
-        
-        // 썸네일 표시 상태 토글
-        btn.addEventListener('click', function() {
+        thumbnailBtn.addEventListener('click', function() {
             document.body.classList.toggle('thumbnails-hidden');
             const isVisible = !document.body.classList.contains('thumbnails-hidden');
-            
             iconSpan.innerHTML = isVisible ? eyeSVG : eyeOffSVG;
-            btn.setAttribute('aria-label', isVisible ? 'Hide thumbnails' : 'Show thumbnails');
-            btn.setAttribute('title', isVisible ? 'Hide thumbnails' : 'Show thumbnails');
+            thumbnailBtn.setAttribute('aria-label', isVisible ? 'Hide thumbnails' : 'Show thumbnails');
+            thumbnailBtn.setAttribute('title', isVisible ? 'Hide thumbnails' : 'Show thumbnails');
         });
+
+        // --- Scroll to Top Button Logic ---
+        if (scrollToTopBtn) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
         
-        // 초기화 함수
+        // --- Initialization and Event Listeners ---
         function init() {
-            updateButtonPosition();
-            // 페이지 로드 시 기본적으로 썸네일이 보이므로 eye 아이콘과 맞는 레이블 설정
+            updateButtonPositions();
             const isVisible = !document.body.classList.contains('thumbnails-hidden');
-            btn.setAttribute('aria-label', isVisible ? 'Hide thumbnails' : 'Show thumbnails');
-            btn.setAttribute('title', isVisible ? 'Hide thumbnails' : 'Show thumbnails');
+            thumbnailBtn.setAttribute('aria-label', isVisible ? 'Hide thumbnails' : 'Show thumbnails');
+            thumbnailBtn.setAttribute('title', isVisible ? 'Hide thumbnails' : 'Show thumbnails');
         }
 
-        // DOM이 준비되면 실행
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', init);
         } else {
             init();
         }
         
-        // 창 크기가 변경될 때마다 위치 재계산
-        window.addEventListener('resize', updateButtonPosition);
+        window.addEventListener('resize', updateButtonPositions);
     })();
 </script>
 </body>

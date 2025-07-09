@@ -26,7 +26,7 @@
         "venue": "ICCV",
         "year": 2025,
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/ccmnet.png",
-        "topic": ["Computational Photography", "Camera ISP", "Color Constancy"],
+        "topic": ["Computational Photography", "Camera ISP", "Color Constancy", "Cross-Camera"],
         "category": "conference",
         "link": "https://www.dykim.me/projects/ccmnet"
     },
@@ -172,7 +172,8 @@
         "authors": ["Jinho Jeong", "Jinwoo Kim", "Younghyun Jo", "Seon Joo Kim"],
         "venue": "ECCV",
         "year": 2024,
-        "topic": ["_"],
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2024/carn.jpg",
+        "topic": ["Super-Resolution", "Pixel-Level Classification"],
         "category": "conference",
         "link": "https://3587jjh.github.io/PCSR/"
     },
