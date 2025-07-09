@@ -85,9 +85,10 @@
         "authors": ["Dongwoo Lee*", "Dong Bok Lee*", "Steven Adriaensen", "Juho Lee", "Sung Ju Hwang", "Frank Hutter", "Seon Joo Kim", "Hae Beom Lee"],
         "venue": "ICML",
         "year": 2025,
-        "topic": ["_"],
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/bnsle.jpg",
+        "topic": ["Scaling Law", "Scaling Law Extrapolation", "Bayesian Inference"],
         "category": "conference",
-        "link": "#"
+        "link": "https://arxiv.org/abs/2505.23032"
     },
     {
         "title": "A Training-Free, Task-Agnostic Framework for Enhancing MLLM Performance on High-Resolution Images",
