@@ -18,7 +18,7 @@
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/trainingfree.png",
         "topic": ["Video LLM", "Token Reduction", "Training-Free"],
         "category": "conference",
-        "link": "#"
+        "link": "https://www.jshyun.me/projects/sttm"
     },
     {
         "title": "CCMNet: Leveraging Calibrated Color Correction Matrices for Cross-Camera Color Constancy",
