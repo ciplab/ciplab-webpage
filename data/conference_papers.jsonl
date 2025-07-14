@@ -8,7 +8,7 @@
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/craim.png",
         "topic": ["Inclusive Text to Video Retrieval", "Autonomous Driving", "Contrastive Learning", "VLM/LLM"],
         "category": "conference",
-        "link": "https://arxiv.org/abs/2506.05000"
+        "link": ""
     },
     {
         "title": "Training-Free Acceleration of Video LLMs via Multi-Granular Spatio-Temporal Token Merging",
