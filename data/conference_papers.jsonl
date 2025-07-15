@@ -97,7 +97,7 @@
         "year": 2025,
         "topic": ["_"],
         "category": "workshop",
-        "link": "#"
+        "link": "https://www.arxiv.org/abs/2507.10202"
     },
     {
         "title": "Visual Fidelity vs. Robustness: Trade-Off Analysis of Image Adversarial Watermark Mitigated by SSIM Loss",
