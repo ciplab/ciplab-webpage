@@ -41,12 +41,12 @@
         "link": "#"
     },
     {
-        "title": "Representing 3D Shapes With 64 Latent Vectors for 3D Diffusion Models",
+        "title": "Representing 3D Shapes with 64 Latent Vectors for 3D Diffusion Models",
         "authors": ["In Cho", "Youngbeom Yoo", "Subin Jeon", "Seon Joo Kim"],
         "venue": "ICCV",
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/rep64.png",
         "year": 2025,
-        "topic": ["_"],
+        "topic": ["3D Conmputer Vision", "3D Generation", "Varitional Autoencoder"],
         "category": "conference",
         "link": "https://arxiv.org/abs/2503.08737"
     },
@@ -56,7 +56,7 @@
         "venue": "ICCV",
         "year": 2025,
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/exploregs.png",
-        "topic": ["_"],
+        "topic": ["3D Computer Vision", "Gaussian Splatting", "Novel View Synthesis"],
         "category": "conference",
         "link": "https://github.com/minsu1206/ExploreGS"
     },
@@ -66,7 +66,7 @@
         "venue": "ICCV",
         "year": 2025,
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/seam360gs.png",
-        "topic": ["_"],
+        "topic": ["3D Computer Vision", "Gaussian Splatting", "Novel View Synthesis"],
         "category": "conference",
         "link": "#"
     },
@@ -202,7 +202,7 @@
         "authors": ["Subin Jeon", "In Cho", "Minsu Kim", "Woongoh Cho", "Seon Joo Kim"],
         "venue": "ECCV",
         "year": 2024,
-        "topic": ["_"],
+        "topic": ["3D Computer Vision", "Animatable 3D Reconstruction", "NeRF"],
         "category": "conference",
         "link": "https://sites.google.com/yonsei.ac.kr/subinjeon/projects/hsnb"
     },
@@ -211,7 +211,7 @@
         "authors": ["Hyunbo Shim*", "In Cho*", "Daekyu Kwon", "Seon Joo Kim"],
         "venue": "ECCV",
         "year": 2024,
-        "topic": ["_"],
+        "topic": ["3D Computer Vision", "Non-Line-of-Sight Imaging", "Computational Imaging"],
         "category": "conference",
         "link": "https://arxiv.org/abs/2308.10269"
     },
@@ -220,7 +220,7 @@
         "authors": ["In Cho", "Hyunbo Shim", "Seon Joo Kim"],
         "venue": "ECCV",
         "year": 2024,
-        "topic": ["_"],
+        "topic": ["3D Computer Vision", "Non-Line-of-Sight Imaging", "Computational Imaging"],
         "category": "conference",
         "link": "https://join16.github.io/leap-page/"
     },
