@@ -46,7 +46,7 @@
         "venue": "ICCV",
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/rep64.png",
         "year": 2025,
-        "topic": ["3D Conmputer Vision", "3D Generation", "Varitional Autoencoder"],
+        "topic": ["3D Computer Vision", "3D Generation", "Varitional Autoencoder"],
         "category": "conference",
         "link": "https://arxiv.org/abs/2503.08737"
     },
