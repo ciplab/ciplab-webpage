@@ -1,6 +1,16 @@
 [
 
     {
+        "title": "UniSkill: Imitating Human Videos via Cross-Embodiment Skill Representations",
+        "authors": ["Hanjung Kim*", "Jaehyun Kang*", "Hyolim Kang", "Meedeum Cho", "Seon Joo Kim", "Youngwoon Lee"],
+        "venue": "CoRL",
+        "year": 2025,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/uniskill.jpg",
+        "topic": ["Robot Learning", "Learning from Human Videos", "Skill Representation"],
+        "category": "conference",
+        "link": "https://kimhanjung.github.io/UniSkill/"
+    },
+    {
         "title": "CRAIM: Caption-Based Autonomous Driving Scene Retrieval via Inclusive Text Matching",
         "authors": ["Minjoo Ki", "Dae Jung Kim", "Kisung Kim", "Seon Joo Kim", "Jinhan Lee"],
         "venue": "ICCV",
@@ -69,16 +79,6 @@
         "topic": ["3D Computer Vision", "Gaussian Splatting", "Novel View Synthesis"],
         "category": "conference",
         "link": "#"
-    },
-    {
-        "title": "UniSkill: Imitating Human Videos via Cross-Embodiment Skill Representations",
-        "authors": ["Hanjung Kim*", "Jaehyun Kang*", "Hyolim Kang", "Meedeum Cho", "Seon Joo Kim", "Youngwoon Lee"],
-        "venue": "CVPRW",
-        "year": 2025,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/uniskill.jpg",
-        "topic": ["Robot Learning", "Learning from Human Videos", "Skill Representation"],
-        "category": "workshop",
-        "link": "https://kimhanjung.github.io/UniSkill/"
     },
     {
         "title": "Bayesian Neural Scaling Laws Extrapolation with Prior-Fitted Networks",
