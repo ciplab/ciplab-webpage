@@ -36,17 +36,19 @@
     ],
     "papers": [
       {
-        "title": "Training-Free Acceleration of Video LLMs via Multi-Granular Spatio-Temporal Token Merging",
-        "venue": "ICCV 2025"
+        "title": "UniSkill: Imitating Human Videos via Cross-Embodiment Skill Representations",
+        "venue": "CoRL 2025",
+        "link": "https://kimhanjung.github.io/UniSkill/"
       },
       {
-        "title": "Imitating Human Videos via Cross-Embodiment Skill Representations",
-        "venue": "under review"
+        "title": "Multi-Granular Spatio-Temporal Token Merging for Training-Free Acceleration of Video LLMs",
+        "venue": "ICCV 2025",
+        "link": "https://www.jshyun.me/projects/sttm"
       },
       {
         "title": "Omni-RGPT: Unifying Image and Video Region-level Understanding via Token Marks",
         "venue": "CVPR 2025",
-        "link": "https://arxiv.org/abs/2501.08326"
+        "link": "https://miranheo.github.io/omni-rgpt/"
       },
       {
         "title": "ActionSwitch: Class-agnostic Detection of Simultaneous Actions in Streaming Videos",
