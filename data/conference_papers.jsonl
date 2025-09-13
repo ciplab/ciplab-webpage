@@ -21,7 +21,7 @@
         "link": ""
     },
     {
-        "title": "Training-Free Acceleration of Video LLMs via Multi-Granular Spatio-Temporal Token Merging",
+        "title": "Multi-Granular Spatio-Temporal Token Merging for Training-Free Acceleration of Video LLMs",
         "authors": ["Jeongseok Hyun", "Sukjun Hwang", "Su Ho Han", "Taeoh Kim", "Inwoong Lee", "Dongyoon Wee", "Joon-Young Lee", "Seon Joo Kim", "Minho Shim"],
         "venue": "ICCV",
         "year": 2025,
