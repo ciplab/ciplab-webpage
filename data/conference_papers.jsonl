@@ -46,9 +46,9 @@
         "venue": "ICCV",
         "year": 2025,
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/open-ended.png",
-        "topic": ["_"],
+        "topic": ["Streaming Video Understanding", "Video LLM"],
         "category": "conference",
-        "link": "#"
+        "link": "https://sites.google.com/view/yunsupark/projects/openhouse"
     },
     {
         "title": "Representing 3D Shapes with 64 Latent Vectors for 3D Diffusion Models",
