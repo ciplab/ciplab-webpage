@@ -1,5 +1,14 @@
 [
-
+    {
+        "title": "4D Scaffold Gaussian Splatting with Dynamic-Aware Anchor Growing for Efficient and High-Fidelity Dynamic Scene Reconstruction",
+        "authors": ["Woong Oh Cho", "In Cho", "Seoha Kim", "Jeongmin Bae", "Youngjung Uh", "Seon Joo Kim"],
+        "venue": "AAAI",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/4d_scaffold_gs.png",
+        "topic": ["3D Computer Vision", "Gaussian Splatting", "Dynamic Scene Reconstruction"],
+        "category": "conference",
+        "link": "#"
+    },
     {
         "title": "UniSkill: Imitating Human Videos via Cross-Embodiment Skill Representations",
         "authors": ["Hanjung Kim*", "Jaehyun Kang*", "Hyolim Kang", "Meedeum Cho", "Seon Joo Kim", "Youngwoon Lee"],
