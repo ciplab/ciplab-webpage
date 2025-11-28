@@ -12,11 +12,11 @@
     "papers": [
       {
         "title": "Learning Personalized Photographic Style from Pairwise User Preferences",
-        "venue": "CVPR 2026 under review"
+        "venue": "under review"
       },
       {
         "title": "LIIFusion: Coarse-to-fine Framework for Generative MEF via Implicit Neural Representation",
-        "venue": "CVPR 2026 under review"
+        "venue": "under review"
       },
       {
         "title": "CCMNet: Leveraging Calibrated Color Correction Matrices for Cross-Camera Color Constancy",
