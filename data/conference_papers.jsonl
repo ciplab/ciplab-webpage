@@ -1,5 +1,15 @@
 [
     {
+        "title": "Decomposed Attention Fusion in MLLMs for Training-Free Video Reasoning Segmentation",
+        "authors": ["Su Ho Han*", "Jeongseok Hyun*", "Pilhyeon Lee", "Minho Shim", "Dongyoon Wee", "Seon Joo Kim"],
+        "venue": "ICLR",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/decaf.png",
+        "topic": ["Video LLM", "Video Segmentation", "Training-Free"],
+        "category": "conference",
+        "link": "https://www.jshyun.me/projects/decaf"
+    },
+    {
         "title": "4D Scaffold Gaussian Splatting with Dynamic-Aware Anchor Growing for Efficient and High-Fidelity Dynamic Scene Reconstruction",
         "authors": ["Woong Oh Cho", "In Cho", "Seoha Kim", "Jeongmin Bae", "Youngjung Uh", "Seon Joo Kim"],
         "venue": "AAAI",
