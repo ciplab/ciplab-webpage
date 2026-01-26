@@ -14,7 +14,7 @@
         "authors": ["Woong Oh Cho", "In Cho", "Seoha Kim", "Jeongmin Bae", "Youngjung Uh", "Seon Joo Kim"],
         "venue": "AAAI",
         "year": 2026,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/4d_scaffold_gs.png",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/4d_scaffold_gs.png",
         "topic": ["3D Computer Vision", "Gaussian Splatting", "Dynamic Scene Reconstruction"],
         "category": "conference",
         "link": "#"
