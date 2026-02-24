@@ -7,7 +7,7 @@
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/pps_thumbnail.png",
         "topic": ["Generative Photography", "Image Retouching", "Personal Preference"],
         "category": "conference",
-        "link": "https://www.jshyun.me/projects/decaf"
+        "link": "#"
     },
     {
         "title": "Decomposed Attention Fusion in MLLMs for Training-Free Video Reasoning Segmentation",
