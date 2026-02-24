@@ -1,5 +1,15 @@
 [
     {
+        "title": "Unsupervised Monocular 3D Keypoint Discovery from Multi-View Diffusion Priors",
+        "authors": ["Subin Jeon", "In Cho", "Junyoung Hong", "Woong Oh Cho", "Seon Joo Kim"],
+        "venue": "CVPR",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/cvpr26_subin.png",
+        "topic": ["_"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
         "title": "Learning Personalized Photographic Style from Pairwise User Preferences",
         "authors": ["Jinwoo Kim", "Jihye Yoo", "Seon Joo Kim"],
         "venue": "CVPR",
