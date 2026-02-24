@@ -1,5 +1,15 @@
 [
     {
+        "title": "Learning Personalized Photographic Style from Pairwise User Preferences",
+        "authors": ["Jinwoo Kim", "Jihye Yoo", "Seon Joo Kim"],
+        "venue": "CVPR",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/pps_thumbnail.png",
+        "topic": ["Generative Photography", "Image Retouching", "Personal Preference"],
+        "category": "conference",
+        "link": "https://www.jshyun.me/projects/decaf"
+    },
+    {
         "title": "Decomposed Attention Fusion in MLLMs for Training-Free Video Reasoning Segmentation",
         "authors": ["Su Ho Han*", "Jeongseok Hyun*", "Pilhyeon Lee", "Minho Shim", "Dongyoon Wee", "Seon Joo Kim"],
         "venue": "ICLR",
@@ -143,7 +153,7 @@
         "venue": "CVPR",
         "year": 2025,
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/orida.png",
-        "topic": ["_"],
+        "topic": ["Generative Photography", "Image Composition", "Harmonization"],
         "category": "conference",
         "link": "#"
     },
@@ -153,7 +163,7 @@
         "venue": "CVPR",
         "year": 2025,
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2025/lsrna.jpg",
-        "topic": ["Super-Resolution", "Diffusion Model"],
+        "topic": ["Generative Photography","Super-Resolution", "Diffusion Model"],
         "category": "conference",
         "link": "https://arxiv.org/abs/2503.18446"
     },
