@@ -11,12 +11,12 @@
     ],
     "papers": [
       {
-        "title": "Learning Personalized Photographic Style from Pairwise User Preferences",
+        "title": "LIIFusion: Coarse-to-fine Framework for Generative MEF via Implicit Neural Representation",
         "venue": "under review"
       },
       {
-        "title": "LIIFusion: Coarse-to-fine Framework for Generative MEF via Implicit Neural Representation",
-        "venue": "under review"
+        "title": "Learning Personalized Photographic Style from Pairwise User Preferences",
+        "venue": "CVPR 2026"
       },
       {
         "title": "CCMNet: Leveraging Calibrated Color Correction Matrices for Cross-Camera Color Constancy",
@@ -83,6 +83,14 @@
       "Point Cloud Understanding"
     ],
     "papers": [
+      {
+        "title": "Unsupervised Monocular 3D Keypoint Discovery from Multi-View Diffusion Priors",
+        "venue": "CVPR 2026"
+      },
+      {
+        "title": "4D Scaffold Gaussian Splatting with Dynamic-Aware Anchor Growing for Efficient and High-Fidelity Dynamic Scene Reconstruction",
+        "venue": "AAAI 2026"
+      },
       {
         "title": "ExploreGS: Explorable 3D Scene Reconstruction with Virtual Camera Samplings and Diffusion Priors",
         "venue": "ICCV 2025",
