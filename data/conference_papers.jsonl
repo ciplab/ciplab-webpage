@@ -1,5 +1,14 @@
 [
     {
+        "title": "Hierarchical Latent Action Model",
+        "authors": ["Hanjung Kim", "Lerrel Pinto", "Seon Joo Kim"],
+        "venue": "ICLRW",
+        "year": 2026,
+        "topic": ["_"],
+        "category": "workshop",
+        "link": "#"
+    },
+    {
         "title": "Unsupervised Monocular 3D Keypoint Discovery from Multi-View Diffusion Priors",
         "authors": ["Subin Jeon", "In Cho", "Junyoung Hong", "Woong Oh Cho", "Seon Joo Kim"],
         "venue": "CVPR",
