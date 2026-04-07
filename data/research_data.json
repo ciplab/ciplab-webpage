@@ -15,6 +15,10 @@
         "venue": "under review"
       },
       {
+        "title": "Tone-Aware Diffusion : Enabling Tone-on-Tone and Tone-in-Tone Generation",
+        "venue": "CVPRW 2026 (Best Paper Runner-Up)",
+      },
+      {
         "title": "Learning Personalized Photographic Style from Pairwise User Preferences",
         "venue": "CVPR 2026"
       },
@@ -27,11 +31,6 @@
         "title": "Latent space Super-Resolution for Higher-Resolution Image Generation with Diffusion Models",
         "venue": "CVPR 2025",
         "link": "https://3587jjh.github.io/LSRNA/"
-      },
-      {
-        "title": "Accelerating Large Image Super-Resolution Networks with Pixel-Level Classification",
-        "venue": "ECCV 2024",
-        "link": "https://3587jjh.github.io/PCSR/"
       }
     ]
   },
