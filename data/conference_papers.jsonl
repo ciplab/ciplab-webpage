@@ -1,5 +1,32 @@
 [
     {
+        "title": "Tone-Aware Diffusion : Enabling Tone-on-Tone and Tone-in-Tone Generation",
+        "authors": ["Jihye Yoo", "Jaemin Kim", "Jinwoo Kim", "Seon Joo Kim],
+        "venue": "CVPRW",
+        "year": 2026,
+        "topic": ["_"],
+        "category": "workshop",
+        "link": "#"
+    },
+    {
+        "title": "FlowISP: Latent Space ISP Transfer via Conditional Flow Matching",
+        "authors": ["Taehyeon Kim", "Jinwoo Kim", "Seon Joo Kim"],
+        "venue": "CVPRW",
+        "year": 2026,
+        "topic": ["_"],
+        "category": "workshop",
+        "link": "#"
+    },
+    {
+        "title": "Freeze the Structure, Free the Color: Fourier-Domain Training for Unpaired Smartphone ISP",
+        "authors": ["Jaemin Kim", "Jinwoo Kim", "Seon Joo Kim"],
+        "venue": "CVPRW",
+        "year": 2026,
+        "topic": ["_"],
+        "category": "workshop",
+        "link": "#"
+    },
+    {
         "title": "Hierarchical Latent Action Model",
         "authors": ["Hanjung Kim", "Lerrel Pinto", "Seon Joo Kim"],
         "venue": "ICLRW",
