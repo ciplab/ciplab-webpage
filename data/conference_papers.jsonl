@@ -4,7 +4,7 @@
         "authors": ["Miran Heo*", "Sukjun Hwang*", "Min-Hung Chen", "Yu-Chiang Frank Wang", "Albert Gu", "Seon Joo Kim", "Ryo Hachiuma"],
         "venue": "CVPR Findings",
         "year": 2026,
-        "topic": ["_"],
+        "topic": ["Video Instance Segmentation", "State Space Model"],
         "category": "conference",
         "link": "https://arxiv.org/abs/2508.19242"
     },
