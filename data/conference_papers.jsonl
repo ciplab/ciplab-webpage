@@ -1,5 +1,14 @@
 [
     {
+        "title": "Autoregressive Universal Video Segmentation Model",
+        "authors": ["Miran Heo*", "Sukjun Hwang*", "Min-Hung Chen", "Yu-Chiang Frank Wang", "Albert Gu", "Seon Joo Kim", "Ryo Hachiuma"],
+        "venue": "CVPR Findings",
+        "year": 2026,
+        "topic": ["_"],
+        "category": "conference",
+        "link": "https://arxiv.org/abs/2508.19242"
+    },
+    {
         "title": "Tone-Aware Diffusion : Enabling Tone-on-Tone and Tone-in-Tone Generation",
         "authors": ["Jihye Yoo", "Jaemin Kim", "Jinwoo Kim", "Seon Joo Kim"],
         "venue": "CVPRW",
@@ -33,7 +42,7 @@
         "year": 2026,
         "topic": ["_"],
         "category": "workshop",
-        "link": "#"
+        "link": "https://arxiv.org/abs/2603.05815"
     },
     {
         "title": "Unsupervised Monocular 3D Keypoint Discovery from Multi-View Diffusion Priors",
