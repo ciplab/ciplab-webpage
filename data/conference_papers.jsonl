@@ -1,5 +1,15 @@
 [
     {
+        "title": "Global Geometry Is Not Enough for Vision Representations",
+        "authors": ["Jiwan Chung", "Seon Joo Kim"],
+        "venue": "ICML",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/visenc.png",
+        "topic": ["Vision Encoder", "Representation Learning"],
+        "category": "conference",
+        "link": "https://arxiv.org/abs/2602.03282"
+    },
+    {
         "title": "Autoregressive Universal Video Segmentation Model",
         "authors": ["Miran Heo*", "Sukjun Hwang*", "Min-Hung Chen", "Yu-Chiang Frank Wang", "Albert Gu", "Seon Joo Kim", "Ryo Hachiuma"],
         "venue": "CVPR Findings",
