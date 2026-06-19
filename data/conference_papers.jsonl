@@ -1,5 +1,35 @@
 [
     {
+        "title": "Keep It Simple: Multi-Key Episodic Memory Retrieval for Ultra-Long Video Understanding",
+        "authors": ["Yeeun Choi", "Youngbeom Yoo", "Joon-Young Lee", "Hyolim Kang†", "Seon Joo Kim†"],
+        "venue": "ECCV",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/eccv26_yeeun.png",
+        "topic": ["Ultra-long Video QA", "Agentic Framework", "Memory RAG"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
+        "title": "Dual-Output Multi-Exposure HDR Reconstruction via SDR Fusion and Gain Map Inverse Tone Mapping",
+        "authors": ["Jinho Kim", "Jinwoo Kim", "Seon Joo Kim"],
+        "venue": "ECCV",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/eccv26_kjinho.png",
+        "topic": ["Generative Photography", "HDR Imaging", "Gain Map"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
+        "title": "LIIFusion: Coarse-to-fine Framework for Generative MEF via Implicit Neural Representation",
+        "authors": ["Sangmin Han", "Jinho Kim", "Jinwoo Kim", "Dongyoung Kim", "Seon Joo Kim"],
+        "venue": "ECCV",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/eccv26_sangmin.png",
+        "topic": ["Generative Photography", "Multi Exposure Fusion", "Coarse-to-fine"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
         "title": "Global Geometry Is Not Enough for Vision Representations",
         "authors": ["Jiwan Chung", "Seon Joo Kim"],
         "venue": "ICML",
