@@ -4,7 +4,7 @@
         "authors": ["Yeeun Choi", "Youngbeom Yoo", "Joon-Young Lee", "Hyolim Kang†", "Seon Joo Kim†"],
         "venue": "ECCV",
         "year": 2026,
-        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/eccv26_yeeun.png",
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/eccv26_yeeun.jpg",
         "topic": ["Ultra-long Video QA", "Agentic Framework", "Memory RAG"],
         "category": "conference",
         "link": "#"
