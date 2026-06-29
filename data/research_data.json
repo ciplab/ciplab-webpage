@@ -75,10 +75,10 @@
     "title": "3D vision",
     "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/3D_Vision.png",
     "tasks": [
+      "Spatial Understanding & Reasoning",
       "Novel-View Synthesis (NeRF, Gaussian Splatting, etc.)",
       "3D Representation Learning",
-      "Animatable 3D Model Reconstruction",
-      "Point Cloud Understanding"
+      "Animatable 3D Model Reconstruction"
     ],
     "papers": [
       {
