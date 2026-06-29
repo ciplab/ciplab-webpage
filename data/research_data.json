@@ -11,8 +11,12 @@
     ],
     "papers": [
       {
+        "title": "Dual-Output Multi-Exposure HDR Reconstruction via SDR Fusion and Gain Map Inverse Tone Mapping",
+        "venue": "ECCV 2026"
+      },
+      {
         "title": "LIIFusion: Coarse-to-fine Framework for Generative MEF via Implicit Neural Representation",
-        "venue": "under review"
+        "venue": "ECCV 2026"
       },
       {
         "title": "Tone-Aware Diffusion : Enabling Tone-on-Tone and Tone-in-Tone Generation",
@@ -21,11 +25,6 @@
       {
         "title": "Learning Personalized Photographic Style from Pairwise User Preferences",
         "venue": "CVPR 2026"
-      },
-      {
-        "title": "CCMNet: Leveraging Calibrated Color Correction Matrices for Cross-Camera Color Constancy",
-        "venue": "ICCV 2025",
-        "link": "https://www.dykim.me/projects/ccmnet"
       },
       {
         "title": "Latent space Super-Resolution for Higher-Resolution Image Generation with Diffusion Models",
