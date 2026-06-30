@@ -114,7 +114,7 @@
   {
   "id": "robotics",
   "title": "Robotics",
-  "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/Robotics.png",
+  "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/Robotics.jpg",
   "tasks": [
     "Learning from Human Video for Robot Learning",
     "Generalized Action Representation",
