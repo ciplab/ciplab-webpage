@@ -39,15 +39,9 @@
     "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/Video_Understanding.gif",
     "tasks": [
       "Streaming Video Understanding in Efficient Architecture (SSM, Efficient Transformer)",
-      "Video-Language Understanding",
-      "Vision for Robotics"
+      "Video-Language Understanding"
     ],
     "papers": [
-      {
-        "title": "UniSkill: Imitating Human Videos via Cross-Embodiment Skill Representations",
-        "venue": "CoRL 2025",
-        "link": "https://kimhanjung.github.io/UniSkill/"
-      },
       {
         "title": "Multi-Granular Spatio-Temporal Token Merging for Training-Free Acceleration of Video LLMs",
         "venue": "ICCV 2025",
