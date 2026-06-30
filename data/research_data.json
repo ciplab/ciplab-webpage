@@ -110,5 +110,29 @@
         "link": "https://join16.github.io/leap-page/"
       }
     ]
-  }
+  },
+  {
+  "id": "robotics",
+  "title": "Robotics",
+  "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/Robotics.png",
+  "tasks": [
+    "Learning from Human Video for Robot Learning",
+    "Generalized Action Representation",
+    "Dexterous manipulation"
+  ],
+  "papers": [
+    {
+      "title": "UniSkill: Imitating Human Videos via Cross-Embodiment Skill Representations",
+      "venue": "CoRL 2025"
+    },
+    {
+      "title": "Hierarchical Latent Action Model",
+      "venue": "under review"
+    },
+    {
+      "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
+      "venue": "under review"
+    }
+  ]
+}
 ]
