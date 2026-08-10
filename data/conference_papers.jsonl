@@ -1,5 +1,15 @@
 [
     {
+        "title": "Where Did It Go Wrong? Process-Level Evaluation of Web Agents with Semantic State Tracking",
+        "authors": ["Jiwan Chung", "JiHyuk Byun", "Vibhav Vineet", "Seon Joo Kim"],
+        "venue": "COLM",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/webstep_teaser.png",
+        "topic": ["WebAgent", "Agent benchmark", "Semantic State Tracking"],
+        "category": "conference",
+        "link": "https://jiwanchung.github.io/webstep/"
+    },
+    {
         "title": "Keep It Simple: Multi-Key Episodic Memory Retrieval for Ultra-Long Video Understanding",
         "authors": ["Yeeun Choi", "Youngbeom Yoo", "Joon-Young Lee", "Hyolim Kang†", "Seon Joo Kim†"],
         "venue": "ECCV",
@@ -7,6 +17,7 @@
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/eccv26_yeeun.jpg",
         "topic": ["Ultra-long Video QA", "Agentic Framework", "Memory RAG"],
         "category": "conference",
+        "reward": "Oral",
         "link": "#"
     },
     {
@@ -17,7 +28,7 @@
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/eccv26_kjinho.png",
         "topic": ["Generative Photography", "HDR Imaging", "Gain Map"],
         "category": "conference",
-        "link": "#"
+        "link": "https://arxiv.org/abs/2608.05626v1"
     },
     {
         "title": "LIIFusion: Coarse-to-fine Framework for Generative MEF via Implicit Neural Representation",
