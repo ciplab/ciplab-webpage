@@ -1,5 +1,15 @@
 [
     {
+        "title": "Streaming Atomic Action Segmentation in Egocentric Videos via Iterative LVLM-to-Streaming Distillation",
+        "authors": ["Hyolim Kang", "Jungsoo Lee", "Janghoon Cho", "Juntae Lee", "Seon Joo Kim", "Sungha Choi"],
+        "venue": "EMNLP",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/emnlp26.png",
+        "topic": ["Streaming video understanding", "Action recognition", "Large vision language model"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
         "title": "Where Did It Go Wrong? Process-Level Evaluation of Web Agents with Semantic State Tracking",
         "authors": ["Jiwan Chung", "JiHyuk Byun", "Vibhav Vineet", "Seon Joo Kim"],
         "venue": "COLM",
@@ -18,7 +28,7 @@
         "topic": ["Ultra-long Video QA", "Agentic Framework", "Memory RAG"],
         "category": "conference",
         "reward": "Oral",
-        "link": "#"
+        "link": "https://choi-yeeun.github.io/MERIT"
     },
     {
         "title": "Dual-Output Multi-Exposure HDR Reconstruction via SDR Fusion and Gain Map Inverse Tone Mapping",
