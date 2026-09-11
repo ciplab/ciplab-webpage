@@ -1,5 +1,15 @@
 [
     {
+        "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
+        "authors": ["Jinho Jeong*", "Se June Joo*", "Jaehyun Kang", "Dongyun Kim", "Yena Kim", "Hanjung Kim", "Seon Joo Kim"],
+        "venue": "CoRL",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/corl26.png",
+        "topic": ["Robot Learning", "Learning from Human Videos", "Robotization"],
+        "category": "conference",
+        "link": "https://3587jjh.github.io/HuRo/"
+    },
+    {
         "title": "Streaming Atomic Action Segmentation in Egocentric Videos via Iterative LVLM-to-Streaming Distillation",
         "authors": ["Hyolim Kang", "Jungsoo Lee", "Janghoon Cho", "Juntae Lee", "Seon Joo Kim", "Sungha Choi"],
         "venue": "EMNLP",
