@@ -1,5 +1,55 @@
 [
     {
+        "title": "RelationVGGT : Visual Geometry Transformers for 3D Spatial Relation Segmentation",
+        "authors": ["Minsu Kim", "Jaesung Choe", "Jiwoo Lee", "Yu-Chiang Frank Wang", "Seon Joo Kim"],
+        "venue": "NeurIPS",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/minsu_nips26.png",
+        "topic": ["3D Computer Vision", "3D Foundation Model", "Spatial Reasoning"],
+        "category": "conference",
+        "link": "https://relationvggt.github.io/"
+    },
+    {
+        "title": "The Mask Is Not the Object: Volumetric Supervision for 3D Gaussian Segmentation",
+        "authors": ["Jeonghwan Cho", "Minsu Kim", "Junyoung Hong", "Seon Joo Kim"],
+        "venue": "NeurIPS",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/jhcho_nips26.png",
+        "topic": ["3D Computer Vision", "Gaussian Splatting", "3D Segmentation"],
+        "category": "conference",
+        "link": "https://jhxcho.github.io/voda/"
+    },
+    {
+        "title": "Rethinking State Tracking in Recurrent Models Through Error Control Dynamics",
+        "authors": ["Jiwan Chung", "Heechan Choi", "Seon Joo Kim"],
+        "venue": "NeurIPS",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/jiwan_nips26.png",
+        "topic": ["State Space Model", "State-Tracking", "Linear Attention"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
+        "title": "Scenes as Objects, Not Primitives: Instance-Structured 3D Tokenization from Unposed Views",
+        "authors": ["Mijin Yoo*", "In Cho*", "Subin Jeon", "Jiwoo Lee", "Eunbyung Park", "Seon Joo Kim"],
+        "venue": "NeurIPS",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/mj_nips26.png",
+        "topic": ["3D Computer Vision", "Scene Tokenization", "3D Understanding"],
+        "category": "conference",
+        "link": "https://yoomimi.github.io/instok3d/"
+    },
+    {
+        "title": "Reading the Unreadable: Text-Aware Image Super-Resolution Needs Reasoning",
+        "authors": ["Jaeseong Lee", "Jinwoo Kim", "Jinho Jeong", "Seon Joo Kim"],
+        "venue": "NeurIPS",
+        "year": 2026,
+        "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/jaeseong_nips26.png",
+        "topic": ["Generative Photography", "Text-Aware Image Super-Resolution", "Reasoning"],
+        "category": "conference",
+        "link": "#"
+    },
+    {
         "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
         "authors": ["Jinho Jeong*", "Se June Joo*", "Jaehyun Kang", "Dongyun Kim", "Yena Kim", "Hanjung Kim", "Seon Joo Kim"],
         "venue": "CoRL",
