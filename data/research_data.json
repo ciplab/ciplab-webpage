@@ -72,7 +72,7 @@
   {
     "id": "3d",
     "title": "3D vision",
-    "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/3D_Vision.png",
+    "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/mj_nips26.png",
     "tasks": [
       "Spatial Understanding & Reasoning",
       "3D Foundation Model",
