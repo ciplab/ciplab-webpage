@@ -72,14 +72,26 @@
   {
     "id": "3d",
     "title": "3D vision",
-    "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/3D_Vision.png",
+    "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/pub_thumbnail/2026/mj_nips26.png",
     "tasks": [
       "Spatial Understanding & Reasoning",
-      "Novel-View Synthesis (NeRF, Gaussian Splatting, etc.)",
+      "3D Foundation Model",
       "3D Representation Learning",
-      "Animatable 3D Model Reconstruction"
+      "Novel-View Synthesis (NeRF, Gaussian Splatting, etc.)"
     ],
     "papers": [
+      {
+        "title": "Scenes as Objects, Not Primitives: Instance-Structured 3D Tokenization from Unposed Views",
+        "venue": "NeurIPS 2026"
+      },
+      {
+        "title": "The Mask Is Not the Object: Volumetric Supervision for 3D Gaussian Segmentation",
+        "venue": "NeurIPS 2026"
+      },
+      {
+        "title": "RelationVGGT : Visual Geometry Transformers for 3D Spatial Relation Segmentation,
+        "venue": "NeurIPS 2026"
+      },
       {
         "title": "Unsupervised Monocular 3D Keypoint Discovery from Multi-View Diffusion Priors",
         "venue": "CVPR 2026"
@@ -87,26 +99,6 @@
       {
         "title": "4D Scaffold Gaussian Splatting with Dynamic-Aware Anchor Growing for Efficient and High-Fidelity Dynamic Scene Reconstruction",
         "venue": "AAAI 2026"
-      },
-      {
-        "title": "ExploreGS: Explorable 3D Scene Reconstruction with Virtual Camera Samplings and Diffusion Priors",
-        "venue": "ICCV 2025",
-        "link": "https://github.com/minsu1206/ExploreGS"
-      },
-      {
-        "title": "Representing 3D Shapes With 64 Latent Vectors for 3D Diffusion Models",
-        "venue": "ICCV 2025",
-        "link": "https://arxiv.org/abs/2503.08737"
-      },
-      {
-        "title": "Hierarchically Structured Neural Bones for Reconstructing Animatable Objects from Casual Videos",
-        "venue": "ECCV 2024",
-        "link": "https://sites.google.com/yonsei.ac.kr/subinjeon/projects/hsnb"
-      },
-      {
-        "title": "Learning to Enhance Aperture Phasor Field for Non-Line-of-Sight Imaging",
-        "venue": "ECCV 2024",
-        "link": "https://join16.github.io/leap-page/"
       }
     ]
   },
