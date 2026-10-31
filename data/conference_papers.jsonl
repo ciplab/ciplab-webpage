@@ -47,7 +47,7 @@
         "thumbnail": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/refs/heads/main/data/pub_thumbnail/2026/jaeseong_nips26.png",
         "topic": ["Generative Photography", "Text-Aware Image Super-Resolution", "Reasoning"],
         "category": "conference",
-        "link": "#"
+        "link": "https://jasonleex1995.github.io/TAISR_needs_Reasoning/"
     },
     {
         "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
