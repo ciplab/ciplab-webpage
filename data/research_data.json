@@ -2,7 +2,7 @@
   {
     "id": "photography",
     "title": "Generative Photography",
-    "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/Low-level_Vision.jpg",
+    "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/gp_intro.mp4",
     "tasks": [
       "Developing Next-Generation Camera ISP Algorithm (finding the meaning of 'good' photo)",
       "Intelligent Low-Level Image Processing (e.g., reasoning SR, generative HDR)",
@@ -11,20 +11,24 @@
     ],
     "papers": [
       {
-        "title": "Dual-Output Multi-Exposure HDR Reconstruction via SDR Fusion and Gain Map Inverse Tone Mapping",
-        "venue": "ECCV 2026"
+        "title": "Reading the Unreadable: Text-Aware Image Super-Resolution Needs Reasoning",
+        "venue": "NeurIPS 2026",
+        "link": "https://jasonleex1995.github.io/TAISR_needs_Reasoning"
       },
       {
-        "title": "LIIFusion: Coarse-to-fine Framework for Generative MEF via Implicit Neural Representation",
-        "venue": "ECCV 2026"
+        "title": "Dual-Output Multi-Exposure HDR Reconstruction via SDR Fusion and Gain Map Inverse Tone Mapping",
+        "venue": "ECCV 2026",
+        "link": "https://vlsrang.github.io/DOME-HDR/"
       },
       {
         "title": "Tone-Aware Diffusion : Enabling Tone-on-Tone and Tone-in-Tone Generation",
-        "venue": "CVPRW 2026 (Best Paper Runner-Up)"
+        "venue": "CVPRW 2026 (Best Paper Runner-Up)",
+        "link": "https://openaccess.thecvf.com/content/CVPR2026W/HiGen/html/Yoo_Tone-Aware_Diffusion__Enabling_Tone-on-Tone_and_Tone-in-Tone_Generation_CVPRW_2026_paper.html"
       },
       {
         "title": "Learning Personalized Photographic Style from Pairwise User Preferences",
-        "venue": "CVPR 2026"
+        "venue": "CVPR 2026",
+        "link": "https://hello-jinwoo.github.io/pps"
       },
       {
         "title": "Latent space Super-Resolution for Higher-Resolution Image Generation with Diffusion Models",
