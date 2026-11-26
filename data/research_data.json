@@ -2,7 +2,7 @@
   {
     "id": "photography",
     "title": "Generative Photography",
-    "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/gp_intro.mp4",
+    "videoUrl": "https://raw.githubusercontent.com/ciplab/ciplab-webpage/main/data/assets/gp_intro.gif",
     "tasks": [
       "Developing Next-Generation Camera ISP Algorithm (finding the meaning of 'good' photo)",
       "Intelligent Low-Level Image Processing (e.g., reasoning SR, generative HDR)",
